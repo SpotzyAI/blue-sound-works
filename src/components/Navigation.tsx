@@ -31,46 +31,49 @@ const Navigation = () => {
       icon: Heart,
       title: "Healthcare",
       description: "Automating phone calls in the medical field",
+      href: "/industries/healthcare",
     },
     {
       icon: ShoppingCart,
       title: "E-commerce",
       description: "Improve e-commerce customer service with AI voice",
+      href: "/industries/ecommerce",
     },
     {
       icon: Building2,
       title: "Call center",
       description: "AI voice agents for call center phone calls",
+      href: "/industries/call-center",
     },
     {
       icon: Home,
       title: "Real estate",
-      description: "Automate real estate phone calls with AI vocie agents",
+      description: "Automate real estate phone calls with AI voice agents",
+      href: "/industries/real-estate",
     },
     {
       icon: Briefcase,
       title: "Services",
       description: "AI voice agents for service industry phone calls",
+      href: "/industries/services",
     },
     {
       icon: Utensils,
       title: "Restaurant",
       description: "Automated phone ordering and reservations",
+      href: "/industries/restaurant",
     },
     {
       icon: Scale,
       title: "Legal",
       description: "Automated legal client communication",
+      href: "/industries/legal",
     },
     {
       icon: Car,
       title: "Car Dealership",
       description: "Automated auto sales and service communication",
-    },
-    {
-      icon: DollarSign,
-      title: "Debt Collection",
-      description: "Automated debt recovery with professional compliance",
+      href: "/industries/car-dealership",
     },
   ];
 
@@ -142,9 +145,10 @@ const Navigation = () => {
                     <h3 className="text-sm font-semibold text-primary mb-4">Industries we serve</h3>
                     <div className="grid grid-cols-3 gap-3">
                       {industryItems.map((item) => (
-                        <div
+                        <a
                           key={item.title}
-                          className="group flex flex-col items-start gap-2 rounded-lg p-3 hover:bg-muted/50 transition-colors cursor-pointer"
+                          href={item.href}
+                          className="group flex flex-col items-start gap-2 rounded-lg p-3 hover:bg-muted/50 transition-colors"
                         >
                           <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                             <item.icon className="h-5 w-5" />
@@ -153,7 +157,7 @@ const Navigation = () => {
                             <div className="font-semibold text-foreground mb-1">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
-                        </div>
+                        </a>
                       ))}
                     </div>
                   </div>
