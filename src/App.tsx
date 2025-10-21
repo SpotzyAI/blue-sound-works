@@ -17,6 +17,9 @@ import Services from "./pages/industries/Services";
 import Restaurant from "./pages/industries/Restaurant";
 import Legal from "./pages/industries/Legal";
 import CarDealership from "./pages/industries/CarDealership";
+import DocsIndex from "./pages/docs/Index";
+import QuickStart from "./pages/docs/QuickStart";
+import CoreConcepts from "./pages/docs/CoreConcepts";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +43,9 @@ const App = () => (
           <Route path="/industries/restaurant" element={<Restaurant />} />
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/car-dealership" element={<CarDealership />} />
+          <Route path="/docs" element={<DocsIndex />} />
+          <Route path="/docs/quick-start" element={<QuickStart />} />
+          <Route path="/docs/core-concepts" element={<CoreConcepts />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
