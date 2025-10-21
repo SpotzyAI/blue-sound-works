@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Upload } from "lucide-react";
+import { useMDXContent } from "@/hooks/use-mdx-content";
 
 const Importing = () => {
-  const [content, setContent] = useState<string>("");
-
-  useEffect(() => {
-    import("@/content/docs/leads/importing.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
-  }, []);
+  const { content } = useMDXContent("leads/importing");
 
   return (
     <DocsLayout>

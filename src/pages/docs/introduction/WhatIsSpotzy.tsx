@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { BookOpen } from "lucide-react";
+import { useMDXContent } from "@/hooks/use-mdx-content";
 
 const WhatIsSpotzy = () => {
-  const [content, setContent] = useState<string>("");
-
-  useEffect(() => {
-    import("@/content/docs/introduction/what-is-spotzy.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
-  }, []);
+  const { content } = useMDXContent("introduction/what-is-spotzy");
 
   return (
     <DocsLayout>

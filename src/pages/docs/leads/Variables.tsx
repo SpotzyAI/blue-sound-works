@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Braces } from "lucide-react";
+import { useMDXContent } from "@/hooks/use-mdx-content";
 
 const Variables = () => {
-  const [content, setContent] = useState<string>("");
-
-  useEffect(() => {
-    import("@/content/docs/leads/variables.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
-  }, []);
+  const { content } = useMDXContent("leads/variables");
 
   return (
     <DocsLayout>

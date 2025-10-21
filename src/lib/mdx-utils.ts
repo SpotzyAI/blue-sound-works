@@ -1,4 +1,5 @@
 import matter from 'gray-matter';
+import { marked } from 'marked';
 
 export interface MDXFrontmatter {
   title: string;
@@ -16,6 +17,15 @@ export const parseMDX = (source: string): MDXContent => {
   return {
     frontmatter: data as MDXFrontmatter,
     content,
+  };
+};
+
+export const parseAndRenderMDX = async (source: string): Promise<{ frontmatter: MDXFrontmatter; html: string }> => {
+  const { data, content } = matter(source);
+  const html = await marked(content);
+  return {
+    frontmatter: data as MDXFrontmatter,
+    html,
   };
 };
 

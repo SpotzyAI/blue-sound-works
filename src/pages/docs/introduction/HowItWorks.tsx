@@ -1,18 +1,10 @@
-import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Workflow } from "lucide-react";
+import { useMDXContent } from "@/hooks/use-mdx-content";
 
 const HowItWorks = () => {
-  const [content, setContent] = useState<string>("");
-
-  useEffect(() => {
-    import("@/content/docs/introduction/how-it-works.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
-  }, []);
+  const { content } = useMDXContent("introduction/how-it-works");
 
   return (
     <DocsLayout>
@@ -22,9 +14,9 @@ const HowItWorks = () => {
             <Workflow className="h-6 w-6 text-primary" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold m-0">How it Works</h1>
+            <h1 className="text-3xl font-bold m-0">How It Works</h1>
             <p className="text-muted-foreground m-0">
-              Understanding the Spotzy.ai platform architecture
+              Understanding the technology behind Spotzy.ai
             </p>
           </div>
         </div>
