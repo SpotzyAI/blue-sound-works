@@ -20,6 +20,17 @@ import CarDealership from "./pages/industries/CarDealership";
 import DocsIndex from "./pages/docs/Index";
 import QuickStart from "./pages/docs/QuickStart";
 import CoreConcepts from "./pages/docs/CoreConcepts";
+import Features from "./pages/docs/Features";
+import FirstAgent from "./pages/docs/FirstAgent";
+import VoiceConfig from "./pages/docs/VoiceConfig";
+import AgentOverview from "./pages/docs/AgentOverview";
+import AgentConfig from "./pages/docs/AgentConfig";
+import Training from "./pages/docs/Training";
+import IntegrationsDoc from "./pages/docs/IntegrationsDoc";
+import CrmIntegration from "./pages/docs/CrmIntegration";
+import Api from "./pages/docs/Api";
+import LanguagesDoc from "./pages/docs/LanguagesDoc";
+import Voices from "./pages/docs/Voices";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +57,17 @@ const App = () => (
           <Route path="/docs" element={<DocsIndex />} />
           <Route path="/docs/quick-start" element={<QuickStart />} />
           <Route path="/docs/core-concepts" element={<CoreConcepts />} />
+          <Route path="/docs/features" element={<Features />} />
+          <Route path="/docs/first-agent" element={<FirstAgent />} />
+          <Route path="/docs/voice-config" element={<VoiceConfig />} />
+          <Route path="/docs/agent-overview" element={<AgentOverview />} />
+          <Route path="/docs/agent-config" element={<AgentConfig />} />
+          <Route path="/docs/training" element={<Training />} />
+          <Route path="/docs/integrations" element={<IntegrationsDoc />} />
+          <Route path="/docs/crm-integration" element={<CrmIntegration />} />
+          <Route path="/docs/api" element={<Api />} />
+          <Route path="/docs/languages" element={<LanguagesDoc />} />
+          <Route path="/docs/voices" element={<Voices />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
