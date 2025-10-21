@@ -103,9 +103,9 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
-          </div>
+          </a>
 
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList>

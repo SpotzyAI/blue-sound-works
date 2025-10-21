@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import spotzyLogo from "@/assets/spotzy-logo.svg";
 
 const Footer = () => {
   return (
@@ -7,12 +8,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">V</span>
-              </div>
-              <span className="text-xl font-bold">VoiceAI</span>
-            </div>
+            <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity w-fit">
+              <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
+            </a>
             <p className="text-muted-foreground">
               Building the future of voice AI, one conversation at a time.
             </p>
@@ -68,7 +66,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 VoiceAI. All rights reserved.
+            © 2025 SpotzyAI. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
