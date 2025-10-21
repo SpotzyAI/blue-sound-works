@@ -1,0 +1,106 @@
+---
+title: "Importing Leads"
+description: "How to import contacts into Spotzy.ai"
+---
+
+# Importing Leads
+
+Learn how to import contacts into your Spotzy.ai account.
+
+## CSV Import
+
+### Prepare Your File
+
+Format requirements:
+
+- CSV or Excel format
+- One contact per row
+- Phone number required
+- UTF-8 encoding
+
+### Example Format
+
+```csv
+first_name,last_name,phone,email,company,custom_field
+John,Doe,+1234567890,john@example.com,Acme Corp,High Priority
+Jane,Smith,+1987654321,jane@example.com,Tech Inc,Medium Priority
+```
+
+### Import Steps
+
+1. Click "Leads" → "Import"
+2. Select your CSV file
+3. Map columns to fields
+4. Review and confirm
+5. Start import
+
+## CRM Integration
+
+### Supported CRMs
+
+Connect directly:
+
+- Salesforce
+- HubSpot
+- Pipedrive
+- Zoho CRM
+- Custom integrations
+
+### Setup Process
+
+1. Navigate to Settings → Integrations
+2. Select your CRM
+3. Authorize connection
+4. Configure sync settings
+5. Map fields
+
+### Sync Options
+
+- **One-time import**: Import once
+- **Scheduled sync**: Regular updates
+- **Real-time sync**: Instant updates
+- **Bi-directional**: Two-way sync
+
+## API Import
+
+### Using the API
+
+Import programmatically:
+
+```bash
+curl -X POST https://api.spotzy.ai/v1/leads \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "first_name": "John",
+    "last_name": "Doe",
+    "phone": "+1234567890",
+    "email": "john@example.com",
+    "custom_fields": {
+      "company": "Acme Corp"
+    }
+  }'
+```
+
+## Data Validation
+
+### Phone Number Format
+
+Accepted formats:
+
+- E.164 format (recommended): `+1234567890`
+- National format: `(123) 456-7890`
+- International format: `+1-123-456-7890`
+
+### Duplicate Handling
+
+Choose how to handle duplicates:
+
+- **Skip**: Ignore duplicate entries
+- **Update**: Overwrite existing data
+- **Merge**: Combine information
+- **Create new**: Allow duplicates
+
+---
+
+*Next: [Managing Leads](/docs/leads/managing).*
