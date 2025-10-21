@@ -70,6 +70,13 @@ import OutboundCallsBasics from "./pages/docs/outbound-calls/Basics";
 import CampaignsBestPractices from "./pages/docs/campaigns/BestPractices";
 import CampaignsScripts from "./pages/docs/campaigns/Scripts";
 import PricingOverview from "./pages/docs/pricing/Overview";
+import OutboundCallsCallerId from "./pages/docs/outbound-calls/CallerId";
+import OutboundCallsVoicemail from "./pages/docs/outbound-calls/Voicemail";
+import InboundCallsForwarding from "./pages/docs/inbound-calls/Forwarding";
+import ConversationPrompts from "./pages/docs/conversation-design/Prompts";
+import ConversationKnowledgeBase from "./pages/docs/conversation-design/KnowledgeBase";
+import ConversationInterruptions from "./pages/docs/conversation-design/Interruptions";
+import ConversationLanguage from "./pages/docs/conversation-design/Language";
 
 const queryClient = new QueryClient();
 
@@ -146,6 +153,13 @@ const App = () => (
           <Route path="/docs/campaigns/best-practices" element={<CampaignsBestPractices />} />
           <Route path="/docs/campaigns/scripts" element={<CampaignsScripts />} />
           <Route path="/docs/pricing/overview" element={<PricingOverview />} />
+          <Route path="/docs/outbound-calls/caller-id" element={<OutboundCallsCallerId />} />
+          <Route path="/docs/outbound-calls/voicemail" element={<OutboundCallsVoicemail />} />
+          <Route path="/docs/inbound-calls/forwarding" element={<InboundCallsForwarding />} />
+          <Route path="/docs/conversation-design/prompts" element={<ConversationPrompts />} />
+          <Route path="/docs/conversation-design/knowledge-base" element={<ConversationKnowledgeBase />} />
+          <Route path="/docs/conversation-design/interruptions" element={<ConversationInterruptions />} />
+          <Route path="/docs/conversation-design/language" element={<ConversationLanguage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
