@@ -35,6 +35,11 @@ const integrations = [
   { name: "Insightly", category: "CRM", logo: "👁️" },
   { name: "Nutshell", category: "CRM", logo: "🥜" },
   { name: "Keap", category: "CRM", logo: "🔐" },
+  { name: "Close", category: "CRM", logo: "🎯" },
+  { name: "Nimble", category: "CRM", logo: "🚀" },
+  { name: "Capsule", category: "CRM", logo: "💊" },
+  { name: "SugarCRM", category: "CRM", logo: "🍬" },
+  { name: "Agile CRM", category: "CRM", logo: "⚡" },
   
   // Communication
   { name: "Slack", category: "Communication", logo: "💬" },
@@ -47,6 +52,16 @@ const integrations = [
   { name: "RingCentral", category: "Communication", logo: "🔔" },
   { name: "8x8", category: "Communication", logo: "☎️" },
   { name: "Zoom", category: "Communication", logo: "📹" },
+  { name: "Google Meet", category: "Communication", logo: "📺" },
+  { name: "GoToMeeting", category: "Communication", logo: "🎥" },
+  { name: "WebEx", category: "Communication", logo: "💻" },
+  { name: "Skype", category: "Communication", logo: "📞" },
+  { name: "Viber", category: "Communication", logo: "📱" },
+  { name: "Line", category: "Communication", logo: "📲" },
+  { name: "WeChat", category: "Communication", logo: "💬" },
+  { name: "Signal", category: "Communication", logo: "🔐" },
+  { name: "Mattermost", category: "Communication", logo: "💭" },
+  { name: "Rocket.Chat", category: "Communication", logo: "🚀" },
   
   // Marketing
   { name: "Mailchimp", category: "Marketing", logo: "📧" },
@@ -59,6 +74,16 @@ const integrations = [
   { name: "Campaign Monitor", category: "Marketing", logo: "📊" },
   { name: "Omnisend", category: "Marketing", logo: "🎪" },
   { name: "Drip", category: "Marketing", logo: "💧" },
+  { name: "AWeber", category: "Marketing", logo: "📬" },
+  { name: "MailerLite", category: "Marketing", logo: "✉️" },
+  { name: "Sendinblue", category: "Marketing", logo: "💌" },
+  { name: "Moosend", category: "Marketing", logo: "🦌" },
+  { name: "Benchmark Email", category: "Marketing", logo: "📈" },
+  { name: "EmailOctopus", category: "Marketing", logo: "🐙" },
+  { name: "Mailjet", category: "Marketing", logo: "✈️" },
+  { name: "SendPulse", category: "Marketing", logo: "💥" },
+  { name: "Elastic Email", category: "Marketing", logo: "🔀" },
+  { name: "Postmark", category: "Marketing", logo: "📬" },
   
   // E-commerce
   { name: "Shopify", category: "E-commerce", logo: "🛒" },
@@ -69,6 +94,13 @@ const integrations = [
   { name: "Square", category: "E-commerce", logo: "⬜" },
   { name: "Wix Stores", category: "E-commerce", logo: "🎪" },
   { name: "Squarespace Commerce", category: "E-commerce", logo: "⬛" },
+  { name: "OpenCart", category: "E-commerce", logo: "🛒" },
+  { name: "3dcart", category: "E-commerce", logo: "📦" },
+  { name: "Ecwid", category: "E-commerce", logo: "🏪" },
+  { name: "Shift4Shop", category: "E-commerce", logo: "🏬" },
+  { name: "Volusion", category: "E-commerce", logo: "📊" },
+  { name: "Big Cartel", category: "E-commerce", logo: "🎨" },
+  { name: "CoreCommerce", category: "E-commerce", logo: "💼" },
   
   // Payment Processing
   { name: "Stripe", category: "Payment Processing", logo: "💳" },
@@ -79,6 +111,14 @@ const integrations = [
   { name: "Klarna", category: "Payment Processing", logo: "🎀" },
   { name: "Afterpay", category: "Payment Processing", logo: "⏰" },
   { name: "Razorpay", category: "Payment Processing", logo: "⚡" },
+  { name: "Square Payments", category: "Payment Processing", logo: "⬜" },
+  { name: "Worldpay", category: "Payment Processing", logo: "🌍" },
+  { name: "2Checkout", category: "Payment Processing", logo: "✅" },
+  { name: "Payoneer", category: "Payment Processing", logo: "💵" },
+  { name: "Skrill", category: "Payment Processing", logo: "💸" },
+  { name: "Mollie", category: "Payment Processing", logo: "🧡" },
+  { name: "GoCardless", category: "Payment Processing", logo: "💳" },
+  { name: "PayU", category: "Payment Processing", logo: "💰" },
   
   // Customer Support
   { name: "Zendesk", category: "Customer Support", logo: "🎧" },
@@ -91,6 +131,14 @@ const integrations = [
   { name: "Crisp", category: "Customer Support", logo: "✨" },
   { name: "Front", category: "Customer Support", logo: "📥" },
   { name: "Gorgias", category: "Customer Support", logo: "👾" },
+  { name: "Re:amaze", category: "Customer Support", logo: "🔄" },
+  { name: "Groove", category: "Customer Support", logo: "🎵" },
+  { name: "Helpshift", category: "Customer Support", logo: "🔧" },
+  { name: "Gladly", category: "Customer Support", logo: "😊" },
+  { name: "Kustomer", category: "Customer Support", logo: "👤" },
+  { name: "Kayako", category: "Customer Support", logo: "🏄" },
+  { name: "Zoho Desk", category: "Customer Support", logo: "📋" },
+  { name: "HappyFox", category: "Customer Support", logo: "🦊" },
   
   // Productivity
   { name: "Zapier", category: "Productivity", logo: "⚡" },
@@ -103,6 +151,16 @@ const integrations = [
   { name: "ClickUp", category: "Productivity", logo: "⬆️" },
   { name: "Basecamp", category: "Productivity", logo: "⛺" },
   { name: "Todoist", category: "Productivity", logo: "✅" },
+  { name: "Evernote", category: "Productivity", logo: "🐘" },
+  { name: "OneNote", category: "Productivity", logo: "📓" },
+  { name: "Google Workspace", category: "Productivity", logo: "🔷" },
+  { name: "Microsoft 365", category: "Productivity", logo: "🔷" },
+  { name: "Dropbox", category: "Productivity", logo: "📦" },
+  { name: "Box", category: "Productivity", logo: "📁" },
+  { name: "OneDrive", category: "Productivity", logo: "☁️" },
+  { name: "Google Drive", category: "Productivity", logo: "📂" },
+  { name: "Coda", category: "Productivity", logo: "📄" },
+  { name: "Confluence", category: "Productivity", logo: "🔗" },
   
   // Analytics
   { name: "Google Analytics", category: "Analytics", logo: "📊" },
@@ -113,6 +171,14 @@ const integrations = [
   { name: "Hotjar", category: "Analytics", logo: "🔥" },
   { name: "Crazy Egg", category: "Analytics", logo: "🥚" },
   { name: "Kissmetrics", category: "Analytics", logo: "💋" },
+  { name: "Piwik PRO", category: "Analytics", logo: "📊" },
+  { name: "Matomo", category: "Analytics", logo: "🎯" },
+  { name: "Adobe Analytics", category: "Analytics", logo: "🅰️" },
+  { name: "Clicky", category: "Analytics", logo: "🖱️" },
+  { name: "Woopra", category: "Analytics", logo: "🎪" },
+  { name: "Chartbeat", category: "Analytics", logo: "💓" },
+  { name: "Fullstory", category: "Analytics", logo: "📹" },
+  { name: "LogRocket", category: "Analytics", logo: "🚀" },
   
   // Accounting
   { name: "QuickBooks", category: "Accounting", logo: "📚" },
@@ -122,6 +188,12 @@ const integrations = [
   { name: "Sage", category: "Accounting", logo: "🌿" },
   { name: "Zoho Books", category: "Accounting", logo: "📘" },
   { name: "Bill.com", category: "Accounting", logo: "🧾" },
+  { name: "Expensify", category: "Accounting", logo: "💰" },
+  { name: "Receipt Bank", category: "Accounting", logo: "🏦" },
+  { name: "KashFlow", category: "Accounting", logo: "💸" },
+  { name: "MYOB", category: "Accounting", logo: "📊" },
+  { name: "NetSuite", category: "Accounting", logo: "🌐" },
+  { name: "Odoo", category: "Accounting", logo: "🔧" },
   
   // Business Intelligence
   { name: "Tableau", category: "Business Intelligence", logo: "📊" },
@@ -129,6 +201,15 @@ const integrations = [
   { name: "Looker", category: "Business Intelligence", logo: "🔎" },
   { name: "Metabase", category: "Business Intelligence", logo: "📉" },
   { name: "Domo", category: "Business Intelligence", logo: "🎲" },
+  { name: "Sisense", category: "Business Intelligence", logo: "📈" },
+  { name: "QlikView", category: "Business Intelligence", logo: "🎯" },
+  { name: "SAP BusinessObjects", category: "Business Intelligence", logo: "💼" },
+  { name: "MicroStrategy", category: "Business Intelligence", logo: "🔍" },
+  { name: "Yellowfin", category: "Business Intelligence", logo: "🐟" },
+  { name: "Klipfolio", category: "Business Intelligence", logo: "📱" },
+  { name: "Chartio", category: "Business Intelligence", logo: "📊" },
+  { name: "Mode Analytics", category: "Business Intelligence", logo: "📉" },
+  { name: "Redash", category: "Business Intelligence", logo: "🔴" },
   
   // Developer Tools
   { name: "GitHub", category: "Developer Tools", logo: "🐙" },
@@ -139,6 +220,18 @@ const integrations = [
   { name: "Postman", category: "Developer Tools", logo: "📮" },
   { name: "Docker", category: "Developer Tools", logo: "🐋" },
   { name: "Jenkins", category: "Developer Tools", logo: "👨‍🔧" },
+  { name: "CircleCI", category: "Developer Tools", logo: "⭕" },
+  { name: "Travis CI", category: "Developer Tools", logo: "🔨" },
+  { name: "Azure DevOps", category: "Developer Tools", logo: "🔷" },
+  { name: "Kubernetes", category: "Developer Tools", logo: "☸️" },
+  { name: "Terraform", category: "Developer Tools", logo: "🌍" },
+  { name: "Ansible", category: "Developer Tools", logo: "🔧" },
+  { name: "Datadog", category: "Developer Tools", logo: "🐕" },
+  { name: "New Relic", category: "Developer Tools", logo: "📊" },
+  { name: "Sentry", category: "Developer Tools", logo: "🚨" },
+  { name: "PagerDuty", category: "Developer Tools", logo: "🚨" },
+  { name: "Splunk", category: "Developer Tools", logo: "🔍" },
+  { name: "Sumo Logic", category: "Developer Tools", logo: "📈" },
   
   // Forms & Surveys
   { name: "Typeform", category: "Forms & Surveys", logo: "📝" },
@@ -147,6 +240,14 @@ const integrations = [
   { name: "Jotform", category: "Forms & Surveys", logo: "📄" },
   { name: "Formstack", category: "Forms & Surveys", logo: "📚" },
   { name: "Wufoo", category: "Forms & Surveys", logo: "🐶" },
+  { name: "Cognito Forms", category: "Forms & Surveys", logo: "🧠" },
+  { name: "123FormBuilder", category: "Forms & Surveys", logo: "🔢" },
+  { name: "Formsite", category: "Forms & Surveys", logo: "🌐" },
+  { name: "Zoho Forms", category: "Forms & Surveys", logo: "📋" },
+  { name: "FormAssembly", category: "Forms & Surveys", logo: "🔧" },
+  { name: "Paperform", category: "Forms & Surveys", logo: "📄" },
+  { name: "SurveyGizmo", category: "Forms & Surveys", logo: "🦎" },
+  { name: "Qualtrics", category: "Forms & Surveys", logo: "🎯" },
   
   // Human Resources
   { name: "BambooHR", category: "Human Resources", logo: "🎋" },
@@ -155,6 +256,16 @@ const integrations = [
   { name: "Gusto", category: "Human Resources", logo: "💸" },
   { name: "Greenhouse", category: "Human Resources", logo: "🌱" },
   { name: "Lever", category: "Human Resources", logo: "🎚️" },
+  { name: "JazzHR", category: "Human Resources", logo: "🎷" },
+  { name: "Workable", category: "Human Resources", logo: "💼" },
+  { name: "Zenefits", category: "Human Resources", logo: "🌟" },
+  { name: "Namely", category: "Human Resources", logo: "📛" },
+  { name: "Rippling", category: "Human Resources", logo: "🌊" },
+  { name: "Personio", category: "Human Resources", logo: "👤" },
+  { name: "HiBob", category: "Human Resources", logo: "👋" },
+  { name: "CharlieHR", category: "Human Resources", logo: "🎭" },
+  { name: "SAP SuccessFactors", category: "Human Resources", logo: "💼" },
+  { name: "Paylocity", category: "Human Resources", logo: "💰" },
   
   // Project Management
   { name: "Jira", category: "Project Management", logo: "🎫" },
@@ -162,6 +273,15 @@ const integrations = [
   { name: "Wrike", category: "Project Management", logo: "📊" },
   { name: "Smartsheet", category: "Project Management", logo: "📑" },
   { name: "TeamGantt", category: "Project Management", logo: "📈" },
+  { name: "Teamwork", category: "Project Management", logo: "👥" },
+  { name: "Workfront", category: "Project Management", logo: "⚡" },
+  { name: "LiquidPlanner", category: "Project Management", logo: "💧" },
+  { name: "ProjectManager", category: "Project Management", logo: "📋" },
+  { name: "Clarizen", category: "Project Management", logo: "🎯" },
+  { name: "ProWorkflow", category: "Project Management", logo: "🔄" },
+  { name: "Mavenlink", category: "Project Management", logo: "🔗" },
+  { name: "Function Point", category: "Project Management", logo: "📍" },
+  { name: "Podio", category: "Project Management", logo: "🎪" },
 ];
 
 const Integrations = () => {
