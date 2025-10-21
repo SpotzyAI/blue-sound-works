@@ -786,8 +786,11 @@ const Integrations = () => {
                   variant="outline" 
                   size="sm"
                   className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
+                  asChild
                 >
-                  Connect
+                  <a href={`/integration/${integration.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                    View Details
+                  </a>
                 </Button>
               </div>
             ))}
