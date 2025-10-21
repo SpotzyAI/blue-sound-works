@@ -54,6 +54,15 @@ import SetupIssues from "./pages/docs/troubleshooting/SetupIssues";
 import GoHighLevel from "./pages/docs/troubleshooting/GoHighLevel";
 import SipIntegration from "./pages/docs/troubleshooting/SipIntegration";
 import VoiceProblems from "./pages/docs/troubleshooting/VoiceProblems";
+import LeadsOverview from "./pages/docs/leads/Overview";
+import LeadsImporting from "./pages/docs/leads/Importing";
+import LeadsManaging from "./pages/docs/leads/Managing";
+import LeadsCreating from "./pages/docs/leads/Creating";
+import LeadsVariables from "./pages/docs/leads/Variables";
+import PhoneNumbersOverview from "./pages/docs/phone-numbers/Overview";
+import PhoneNumbersTypes from "./pages/docs/phone-numbers/Types";
+import PhoneNumbersPurchasing from "./pages/docs/phone-numbers/Purchasing";
+import PhoneNumbersSupportedCountries from "./pages/docs/phone-numbers/SupportedCountries";
 
 const queryClient = new QueryClient();
 
@@ -114,6 +123,15 @@ const App = () => (
           <Route path="/docs/troubleshooting/gohighlevel" element={<GoHighLevel />} />
           <Route path="/docs/troubleshooting/sip-integration" element={<SipIntegration />} />
           <Route path="/docs/troubleshooting/voice-problems" element={<VoiceProblems />} />
+          <Route path="/docs/leads/overview" element={<LeadsOverview />} />
+          <Route path="/docs/leads/importing" element={<LeadsImporting />} />
+          <Route path="/docs/leads/managing" element={<LeadsManaging />} />
+          <Route path="/docs/leads/creating" element={<LeadsCreating />} />
+          <Route path="/docs/leads/variables" element={<LeadsVariables />} />
+          <Route path="/docs/phone-numbers/overview" element={<PhoneNumbersOverview />} />
+          <Route path="/docs/phone-numbers/types" element={<PhoneNumbersTypes />} />
+          <Route path="/docs/phone-numbers/purchasing" element={<PhoneNumbersPurchasing />} />
+          <Route path="/docs/phone-numbers/supported-countries" element={<PhoneNumbersSupportedCountries />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
