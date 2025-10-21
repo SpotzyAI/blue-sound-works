@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Play, CheckCircle2, XCircle } from "lucide-react";
-import { integrationActions, generateBasicActions, ConfigField, Action, Trigger } from "@/data/integrationActions";
+import { integrationActions, generateIntegrationActions, ConfigField, Action, Trigger } from "@/data/integrationActions";
 
 // Logo URLs using Clearbit Logo API
 const getLogoUrl = (name: string) => {
@@ -133,9 +133,8 @@ const IntegrationDetail = () => {
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ') || '';
 
-  // Get integration data or generate basic actions
-  const integrationData = integrationActions[formattedName] || 
-    generateBasicActions(formattedName, "General");
+  // Get integration data or generate category-based actions
+  const integrationData = generateIntegrationActions(formattedName, "General");
 
   const logoUrl = getLogoUrl(formattedName);
 
