@@ -20,6 +20,9 @@ import CarDealership from "./pages/industries/CarDealership";
 import DocsIndex from "./pages/docs/Index";
 import QuickStart from "./pages/docs/QuickStart";
 import CoreConcepts from "./pages/docs/CoreConcepts";
+import WhatIsSpotzy from "./pages/docs/introduction/WhatIsSpotzy";
+import HowItWorks from "./pages/docs/introduction/HowItWorks";
+import KeyTerminology from "./pages/docs/introduction/KeyTerminology";
 import Features from "./pages/docs/Features";
 import FirstAgent from "./pages/docs/FirstAgent";
 import VoiceConfig from "./pages/docs/VoiceConfig";
@@ -62,6 +65,9 @@ const App = () => (
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/car-dealership" element={<CarDealership />} />
           <Route path="/docs" element={<DocsIndex />} />
+          <Route path="/docs/introduction/what-is-spotzy" element={<WhatIsSpotzy />} />
+          <Route path="/docs/introduction/how-it-works" element={<HowItWorks />} />
+          <Route path="/docs/introduction/key-terminology" element={<KeyTerminology />} />
           <Route path="/docs/quick-start" element={<QuickStart />} />
           <Route path="/docs/core-concepts" element={<CoreConcepts />} />
           <Route path="/docs/features" element={<Features />} />
