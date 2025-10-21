@@ -14,17 +14,17 @@ const Navigation = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="/#features" className="text-foreground/80 hover:text-primary transition-colors">
               Features
             </a>
-            <a href="#use-cases" className="text-foreground/80 hover:text-primary transition-colors">
+            <a href="/#use-cases" className="text-foreground/80 hover:text-primary transition-colors">
               Use Cases
             </a>
-            <a href="#pricing" className="text-foreground/80 hover:text-primary transition-colors">
-              Pricing
+            <a href="/languages" className="text-foreground/80 hover:text-primary transition-colors">
+              Languages
             </a>
-            <a href="#docs" className="text-foreground/80 hover:text-primary transition-colors">
-              Documentation
+            <a href="/integrations" className="text-foreground/80 hover:text-primary transition-colors">
+              Integrations
             </a>
           </div>
 
