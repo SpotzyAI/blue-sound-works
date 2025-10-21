@@ -1,10 +1,18 @@
+import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { FileText } from "lucide-react";
-import { useMDXContent } from "@/hooks/use-mdx-content";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/campaigns/scripts.mdx?raw";
 
 const Scripts = () => {
-  const { content } = useMDXContent("campaigns/scripts");
+  const [content, setContent] = useState<string>("");
+
+  useEffect(() => {
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
+  }, []);
 
   return (
     <DocsLayout>

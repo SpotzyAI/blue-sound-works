@@ -1,10 +1,18 @@
+import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Users } from "lucide-react";
-import { useMDXContent } from "@/hooks/use-mdx-content";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/leads/overview.mdx?raw";
 
 const Overview = () => {
-  const { content } = useMDXContent("leads/overview");
+  const [content, setContent] = useState<string>("");
+
+  useEffect(() => {
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
+  }, []);
 
   return (
     <DocsLayout>

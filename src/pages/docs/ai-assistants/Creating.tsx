@@ -3,17 +3,15 @@ import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Plus } from "lucide-react";
 import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/ai-assistants/creating.mdx?raw";
 
 const Creating = () => {
   const [content, setContent] = useState<string>("");
 
   useEffect(() => {
-    import("@/content/docs/ai-assistants/creating.mdx?raw").then(
-      async (module) => {
-        const { html } = await parseAndRenderMDX(module.default);
-        setContent(html);
-      }
-    );
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
   }, []);
 
   return (
