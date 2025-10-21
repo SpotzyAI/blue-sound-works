@@ -20,6 +20,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const categories = [
   "All Categories",
@@ -591,6 +600,8 @@ const Integrations = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("name");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const filteredIntegrations = integrations
     .filter((integration) => {
@@ -606,6 +617,23 @@ const Integrations = () => {
       if (sortBy === "name") return a.name.localeCompare(b.name);
       return 0;
     });
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredIntegrations.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedIntegrations = filteredIntegrations.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handleSearchChange = (value: string) => {
+    setSearchQuery(value);
+    setCurrentPage(1);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -659,7 +687,7 @@ const Integrations = () => {
                   size="sm"
                   className="hover-scale animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
-                  onClick={() => setSelectedCategory(category)}
+                  onClick={() => handleCategoryChange(category)}
                 >
                   {category}
                 </Button>
@@ -681,7 +709,7 @@ const Integrations = () => {
                   type="text"
                   placeholder="Search integrations..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => handleSearchChange(e.target.value)}
                   className="pl-10 h-12 text-base"
                 />
               </div>
@@ -710,7 +738,7 @@ const Integrations = () => {
                   <Button
                     key={category}
                     variant={selectedCategory === category ? "default" : "outline"}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => handleCategoryChange(category)}
                     size="sm"
                     className="transition-all duration-300 hover-scale"
                   >
@@ -724,13 +752,13 @@ const Integrations = () => {
             </div>
 
             <div className="text-sm text-muted-foreground text-center">
-              Showing {filteredIntegrations.length} of {integrations.length} integrations
+              Showing {startIndex + 1}-{Math.min(endIndex, filteredIntegrations.length)} of {filteredIntegrations.length} integrations
             </div>
           </div>
 
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredIntegrations.map((integration, index) => (
+            {paginatedIntegrations.map((integration, index) => (
               <div
                 key={integration.name}
                 className="group bg-card border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 flex flex-col items-center text-center animate-fade-in"
@@ -770,6 +798,56 @@ const Integrations = () => {
               <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
               <h3 className="text-xl font-semibold mb-2">No integrations found</h3>
               <p className="text-muted-foreground">Try adjusting your search or filters</p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {filteredIntegrations.length > itemsPerPage && (
+            <div className="mt-12">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                      className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                  
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                    if (
+                      page === 1 ||
+                      page === totalPages ||
+                      (page >= currentPage - 1 && page <= currentPage + 1)
+                    ) {
+                      return (
+                        <PaginationItem key={page}>
+                          <PaginationLink
+                            onClick={() => setCurrentPage(page)}
+                            isActive={currentPage === page}
+                            className="cursor-pointer"
+                          >
+                            {page}
+                          </PaginationLink>
+                        </PaginationItem>
+                      );
+                    } else if (page === currentPage - 2 || page === currentPage + 2) {
+                      return (
+                        <PaginationItem key={page}>
+                          <PaginationEllipsis />
+                        </PaginationItem>
+                      );
+                    }
+                    return null;
+                  })}
+                  
+                  <PaginationItem>
+                    <PaginationNext 
+                      onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                      className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
             </div>
           )}
         </div>
