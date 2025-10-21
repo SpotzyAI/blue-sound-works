@@ -63,6 +63,13 @@ import PhoneNumbersOverview from "./pages/docs/phone-numbers/Overview";
 import PhoneNumbersTypes from "./pages/docs/phone-numbers/Types";
 import PhoneNumbersPurchasing from "./pages/docs/phone-numbers/Purchasing";
 import PhoneNumbersSupportedCountries from "./pages/docs/phone-numbers/SupportedCountries";
+import InboundCallsBasics from "./pages/docs/inbound-calls/Basics";
+import InboundCallsRouting from "./pages/docs/inbound-calls/Routing";
+import InboundCallsHandling from "./pages/docs/inbound-calls/Handling";
+import OutboundCallsBasics from "./pages/docs/outbound-calls/Basics";
+import CampaignsBestPractices from "./pages/docs/campaigns/BestPractices";
+import CampaignsScripts from "./pages/docs/campaigns/Scripts";
+import PricingOverview from "./pages/docs/pricing/Overview";
 
 const queryClient = new QueryClient();
 
@@ -132,6 +139,13 @@ const App = () => (
           <Route path="/docs/phone-numbers/types" element={<PhoneNumbersTypes />} />
           <Route path="/docs/phone-numbers/purchasing" element={<PhoneNumbersPurchasing />} />
           <Route path="/docs/phone-numbers/supported-countries" element={<PhoneNumbersSupportedCountries />} />
+          <Route path="/docs/inbound-calls/basics" element={<InboundCallsBasics />} />
+          <Route path="/docs/inbound-calls/routing" element={<InboundCallsRouting />} />
+          <Route path="/docs/inbound-calls/handling" element={<InboundCallsHandling />} />
+          <Route path="/docs/outbound-calls/basics" element={<OutboundCallsBasics />} />
+          <Route path="/docs/campaigns/best-practices" element={<CampaignsBestPractices />} />
+          <Route path="/docs/campaigns/scripts" element={<CampaignsScripts />} />
+          <Route path="/docs/pricing/overview" element={<PricingOverview />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
