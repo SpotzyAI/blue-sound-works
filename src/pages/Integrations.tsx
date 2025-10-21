@@ -3,7 +3,23 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { 
+  Search, 
+  Plug2, 
+  Zap, 
+  TrendingUp, 
+  Sparkles,
+  Filter,
+  LayoutGrid,
+  Check
+} from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const categories = [
   "All Categories",
@@ -23,6 +39,11 @@ const categories = [
   "Forms and surveys",
   "Human resources",
   "Payment processing",
+];
+
+const popularIntegrations = [
+  "Slack", "Google Drive", "Stripe", "OpenAI", "Salesforce", 
+  "HubSpot", "Shopify", "Airtable", "Notion", "Zapier"
 ];
 
 // Logo URLs using Clearbit Logo API (free, no auth required)
@@ -569,83 +590,186 @@ const getLogo = (name: string) => {
 const Integrations = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState("name");
 
-  const filteredIntegrations = integrations.filter((integration) => {
-    const matchesCategory =
-      selectedCategory === "All Categories" ||
-      integration.category === selectedCategory;
-    const matchesSearch = integration.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredIntegrations = integrations
+    .filter((integration) => {
+      const matchesCategory =
+        selectedCategory === "All Categories" ||
+        integration.category === selectedCategory;
+      const matchesSearch = integration.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      if (sortBy === "name") return a.name.localeCompare(b.name);
+      return 0;
+    });
 
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Connect with 270+ Tools
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-subtle border-b border-border">
+        <div className="container mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+            <Plug2 className="h-4 w-4" />
+            <span>Seamless Integrations</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            Connect with <span className="text-primary">270+</span> Tools
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Seamlessly integrate your favorite platforms and automate your workflow with our no-code platform
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in">
+            Seamlessly integrate your favorite platforms and automate your workflow with our powerful no-code platform
           </p>
-        </div>
-      </section>
 
-      <section className="py-8 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
-            <div className="relative w-full md:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-              <Input
-                type="text"
-                placeholder="Search integrations..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
-              />
+          {/* Stats Grid */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+            <div className="bg-card border border-border rounded-xl p-6 shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in">
+              <Plug2 className="h-8 w-8 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold text-primary mb-1">270+</div>
+              <div className="text-sm text-muted-foreground">Integrations</div>
             </div>
-            
-            <div className="flex flex-wrap gap-2 justify-center">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
+            <div className="bg-card border border-border rounded-xl p-6 shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in">
+              <Zap className="h-8 w-8 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold text-primary mb-1">1-Click</div>
+              <div className="text-sm text-muted-foreground">Setup</div>
+            </div>
+            <div className="bg-card border border-border rounded-xl p-6 shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in">
+              <Sparkles className="h-8 w-8 text-primary mx-auto mb-3" />
+              <div className="text-3xl font-bold text-primary mb-1">Real-time</div>
+              <div className="text-sm text-muted-foreground">Sync</div>
+            </div>
+          </div>
+
+          {/* Popular Integrations Preview */}
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-4 flex items-center justify-center gap-2">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              Most Popular
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.slice(1, 7).map((category, index) => (
+                <Button 
+                  key={category} 
+                  variant="secondary" 
+                  size="sm"
+                  className="hover-scale animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                   onClick={() => setSelectedCategory(category)}
-                  className="text-sm"
                 >
                   {category}
                 </Button>
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Integrations Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          {/* Search and Filters */}
+          <div className="mb-12">
+            <div className="flex flex-col lg:flex-row gap-4 mb-6">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search integrations..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 h-12 text-base"
+                />
+              </div>
+              
+              <div className="flex gap-3">
+                <Select value={sortBy} onValueChange={setSortBy}>
+                  <SelectTrigger className="w-[180px] h-12">
+                    <LayoutGrid className="h-4 w-4 mr-2" />
+                    <SelectValue placeholder="Sort by" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="name">Name (A-Z)</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            {/* Category Filters */}
+            <div className="mb-6">
+              <div className="flex items-center gap-2 mb-4">
+                <Filter className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm font-medium text-muted-foreground">Filter by category:</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? "default" : "outline"}
+                    onClick={() => setSelectedCategory(category)}
+                    size="sm"
+                    className="transition-all duration-300 hover-scale"
+                  >
+                    {selectedCategory === category && (
+                      <Check className="h-3 w-3 mr-1" />
+                    )}
+                    {category}
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-sm text-muted-foreground text-center">
+              Showing {filteredIntegrations.length} of {integrations.length} integrations
+            </div>
+          </div>
+
+          {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredIntegrations.map((integration) => (
+            {filteredIntegrations.map((integration, index) => (
               <div
                 key={integration.name}
-                className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center group"
+                className="group bg-card border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 flex flex-col items-center text-center animate-fade-in"
+                style={{ animationDelay: `${index * 0.02}s` }}
               >
-                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {getLogo(integration.name)}
-                  <div className="hidden w-16 h-16 bg-primary/10 rounded-lg items-center justify-center text-2xl font-bold text-primary">
-                    {integration.name.charAt(0)}
+                <div className="relative mb-4">
+                  <div className="transform group-hover:scale-110 transition-transform duration-300">
+                    {getLogo(integration.name)}
+                    <div className="hidden w-16 h-16 bg-primary/10 rounded-xl items-center justify-center text-2xl font-bold text-primary shadow-lg">
+                      {integration.name.charAt(0)}
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">{integration.name}</h3>
-                <span className="text-xs text-muted-foreground px-3 py-1 bg-muted rounded-full">
+                
+                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
+                  {integration.name}
+                </h3>
+                
+                <span className="text-xs text-muted-foreground px-3 py-1 bg-muted rounded-full mb-4 inline-flex items-center gap-1">
+                  <Plug2 className="h-3 w-3" />
                   {integration.category}
                 </span>
+
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
+                >
+                  Connect
+                </Button>
               </div>
             ))}
           </div>
 
           {filteredIntegrations.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-muted-foreground">No integrations found matching your criteria.</p>
+              <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4 opacity-50" />
+              <h3 className="text-xl font-semibold mb-2">No integrations found</h3>
+              <p className="text-muted-foreground">Try adjusting your search or filters</p>
             </div>
           )}
         </div>
