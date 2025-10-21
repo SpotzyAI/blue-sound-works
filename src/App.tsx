@@ -106,6 +106,7 @@ const App = () => (
           <Route path="/docs/introduction/key-terminology" element={<KeyTerminology />} />
           <Route path="/docs/getting-started/account-setup" element={<AccountSetup />} />
           <Route path="/docs/getting-started/billing" element={<Billing />} />
+          <Route path="/docs/getting-started/quick-start" element={<QuickStart />} />
           <Route path="/docs/ai-assistants/overview" element={<AssistantsOverview />} />
           <Route path="/docs/ai-assistants/creating" element={<AssistantsCreating />} />
           <Route path="/docs/ai-assistants/modes" element={<AssistantsModes />} />
