@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock } from "lucide-react";
+import spotzyLogo from "@/assets/spotzy-logo.svg";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -103,10 +104,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">V</span>
-            </div>
-            <span className="text-xl font-bold">VoiceAI</span>
+            <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
           </div>
 
           <NavigationMenu className="hidden md:block">
