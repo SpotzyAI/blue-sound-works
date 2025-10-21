@@ -31,6 +31,13 @@ import CrmIntegration from "./pages/docs/CrmIntegration";
 import Api from "./pages/docs/Api";
 import LanguagesDoc from "./pages/docs/LanguagesDoc";
 import Voices from "./pages/docs/Voices";
+import CallQuality from "./pages/docs/troubleshooting/CallQuality";
+import TroubleshootingCampaigns from "./pages/docs/troubleshooting/Campaigns";
+import TroubleshootingLeads from "./pages/docs/troubleshooting/Leads";
+import SetupIssues from "./pages/docs/troubleshooting/SetupIssues";
+import GoHighLevel from "./pages/docs/troubleshooting/GoHighLevel";
+import SipIntegration from "./pages/docs/troubleshooting/SipIntegration";
+import VoiceProblems from "./pages/docs/troubleshooting/VoiceProblems";
 
 const queryClient = new QueryClient();
 
@@ -68,6 +75,13 @@ const App = () => (
           <Route path="/docs/api" element={<Api />} />
           <Route path="/docs/languages" element={<LanguagesDoc />} />
           <Route path="/docs/voices" element={<Voices />} />
+          <Route path="/docs/troubleshooting/call-quality" element={<CallQuality />} />
+          <Route path="/docs/troubleshooting/campaigns" element={<TroubleshootingCampaigns />} />
+          <Route path="/docs/troubleshooting/leads" element={<TroubleshootingLeads />} />
+          <Route path="/docs/troubleshooting/setup-issues" element={<SetupIssues />} />
+          <Route path="/docs/troubleshooting/gohighlevel" element={<GoHighLevel />} />
+          <Route path="/docs/troubleshooting/sip-integration" element={<SipIntegration />} />
+          <Route path="/docs/troubleshooting/voice-problems" element={<VoiceProblems />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
