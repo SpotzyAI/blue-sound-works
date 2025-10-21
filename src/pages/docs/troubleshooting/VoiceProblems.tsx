@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { Wrench } from "lucide-react";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/troubleshooting/voice-problems.mdx?raw";
 
 const VoiceProblems = () => {
   const [content, setContent] = useState<string>("");
 
   useEffect(() => {
-    import("@/content/docs/troubleshooting/voice-problems.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
   }, []);
 
   return (

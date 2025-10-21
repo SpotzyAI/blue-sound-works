@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { PhoneOutgoing } from "lucide-react";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/outbound-calls/basics.mdx?raw";
 
 const Basics = () => {
   const [content, setContent] = useState<string>("");
 
   useEffect(() => {
-    import("@/content/docs/outbound-calls/basics.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
   }, []);
 
   return (

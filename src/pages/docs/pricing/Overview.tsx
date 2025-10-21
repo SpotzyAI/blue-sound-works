@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { DollarSign } from "lucide-react";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/pricing/overview.mdx?raw";
 
 const Overview = () => {
   const [content, setContent] = useState<string>("");
 
   useEffect(() => {
-    import("@/content/docs/pricing/overview.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
   }, []);
 
   return (

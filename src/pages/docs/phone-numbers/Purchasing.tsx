@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import DocsLayout from "@/components/DocsLayout";
 import { DocContent } from "@/components/docs/DocContent";
 import { ShoppingCart } from "lucide-react";
+import { parseAndRenderMDX } from "@/lib/mdx-utils";
+import rawContent from "@/content/docs/phone-numbers/purchasing.mdx?raw";
 
 const Purchasing = () => {
   const [content, setContent] = useState<string>("");
 
   useEffect(() => {
-    import("@/content/docs/phone-numbers/purchasing.mdx?raw").then(
-      (module) => {
-        setContent(module.default);
-      }
-    );
+    parseAndRenderMDX(rawContent).then(({ html }) => {
+      setContent(html);
+    });
   }, []);
 
   return (
