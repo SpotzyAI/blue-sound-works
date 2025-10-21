@@ -1,0 +1,189 @@
+---
+title: "Interruption Handling"
+description: "Managing conversation interruptions"
+---
+
+# Interruption Handling
+
+Learn how to configure your AI assistant to handle interruptions naturally.
+
+## Understanding Interruptions
+
+### What are Interruptions?
+
+Interruptions occur when:
+
+- Caller speaks while assistant is talking
+- Caller cuts off mid-sentence
+- Urgent questions arise
+- Clarification needed immediately
+
+### Why They Matter
+
+Good interruption handling creates:
+
+- Natural conversation flow
+- Better user experience
+- Higher satisfaction
+- More efficient calls
+
+## Interruption Strategies
+
+### Immediate Stop
+
+Stop speaking when interrupted:
+
+**Best for:**
+- Important information gathering
+- Emergency situations
+- Frustrated callers
+- Time-sensitive calls
+
+**Configuration:**
+```
+Interruption mode: Immediate
+Sensitivity: High
+Resume behavior: Don't resume
+```
+
+### Finish Sentence
+
+Complete current thought:
+
+**Best for:**
+- Critical information delivery
+- Complex explanations
+- Legal disclaimers
+- Important instructions
+
+**Configuration:**
+```
+Interruption mode: Finish sentence
+Sensitivity: Medium
+Resume behavior: Optional
+```
+
+### Continue Speaking
+
+Ignore interruptions:
+
+**Best for:**
+- Pre-recorded messages
+- Compliance statements
+- Critical warnings
+- Time-sensitive announcements
+
+**Configuration:**
+```
+Interruption mode: Continue
+Sensitivity: Low
+Resume behavior: Always complete
+```
+
+## Configuration
+
+### Sensitivity Levels
+
+**High Sensitivity:**
+- Detects soft interruptions
+- Responds to hesitations
+- Quick to yield
+- Risk: False positives
+
+**Medium Sensitivity (Recommended):**
+- Balanced approach
+- Natural conversation
+- Reduces false triggers
+- Most human-like
+
+**Low Sensitivity:**
+- Only clear interruptions
+- Less responsive
+- Fewer disruptions
+- Risk: Seems robotic
+
+### Response Patterns
+
+How assistant responds:
+
+**Acknowledge:**
+```
+Caller: "Wait, I have a question—"
+Assistant: "Of course! What's your question?"
+```
+
+**Continue Context:**
+```
+Caller: "Hold on—"
+Assistant: "Sure, what would you like to know about what I just mentioned?"
+```
+
+**Reset:**
+```
+Caller: "Actually, never mind that..."
+Assistant: "No problem. What can I help you with instead?"
+```
+
+## Best Practices
+
+### Natural Flow
+
+Create natural dialogue:
+
+- Allow interruptions for questions
+- Acknowledge interruptions
+- Don't repeat unnecessarily
+- Move conversation forward
+
+### Context Retention
+
+Remember what was discussed:
+
+```
+Assistant: "As I was mentioning about our pricing..."
+[Caller interrupts]
+Caller: "What about support?"
+Assistant: "Great question. Our support is included in all plans. Now, back to pricing—we offer three tiers..."
+```
+
+### Urgency Detection
+
+Detect urgent interruptions:
+
+```
+Caller: "WAIT! That's wrong!"
+Assistant: "I apologize. Let me correct that right away. What specifically needs to be fixed?"
+```
+
+## Advanced Features
+
+### Emotion Detection
+
+Respond based on tone:
+
+**Frustrated:**
+- Yield immediately
+- Show empathy
+- Offer solutions
+
+**Confused:**
+- Pause and clarify
+- Ask if they understand
+- Offer more detail
+
+**Excited:**
+- Match enthusiasm
+- Move quickly
+- Capitalize on momentum
+
+### Dynamic Adjustment
+
+Adapt during conversation:
+
+- Multiple interruptions → Become more concise
+- Patient listener → Provide more detail
+- Quick speaker → Match their pace
+
+---
+
+*Learn about [Language Settings](/docs/conversation-design/language).*

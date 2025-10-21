@@ -1,0 +1,131 @@
+---
+title: "Call Forwarding"
+description: "Configure call forwarding and transfers"
+---
+
+# Call Forwarding
+
+Set up call forwarding rules to route calls to human agents when needed.
+
+## Forwarding Types
+
+### Immediate Forward
+
+Forward all calls immediately:
+
+- **Use case**: Maintenance mode
+- **Setup**: One-click enable
+- **Destination**: Any phone number
+
+### Conditional Forward
+
+Forward based on conditions:
+
+- **Busy**: When all assistants busy
+- **No answer**: If assistant fails
+- **Time-based**: Outside business hours
+- **Caller-based**: VIP callers
+
+### Selective Forward
+
+Forward specific scenarios:
+
+- Caller requests human
+- Complex questions
+- Complaints or issues
+- High-value opportunities
+
+## Configuration
+
+### Setting Up Forwarding
+
+1. Go to Phone Numbers settings
+2. Select number
+3. Click "Forwarding Rules"
+4. Add forwarding number
+5. Set conditions
+6. Test and activate
+
+### Forwarding Options
+
+Configure behavior:
+
+- **Ring time**: How long before forward
+- **Simultaneous ring**: Call multiple numbers
+- **Sequential**: Try numbers in order
+- **Voicemail**: Fallback to voicemail
+
+## Transfer Types
+
+### Cold Transfer
+
+Direct transfer without context:
+
+- Quick handoff
+- No wait time
+- Caller repeats information
+
+### Warm Transfer
+
+Transfer with context:
+
+```
+Assistant: "Let me connect you with a specialist. Please hold while I get them on the line."
+[Calls agent, provides context]
+Assistant: "I have [Caller Name] on the line regarding [Issue]. They need help with [Details]."
+[Connects caller]
+```
+
+### Supervised Transfer
+
+Assistant stays on line:
+
+- Monitor transfer
+- Ensure successful connection
+- Assist if needed
+
+## Advanced Features
+
+### Smart Routing
+
+Intelligent forwarding:
+
+- **Skill-based**: Match to expertise
+- **Load balancing**: Distribute evenly
+- **Priority**: Route VIPs first
+- **Availability**: Only forward to available agents
+
+### Failover
+
+Backup plans:
+
+1. Primary assistant
+2. Backup assistant
+3. Human agent
+4. Voicemail
+5. Callback request
+
+## Best Practices
+
+### When to Forward
+
+Consider forwarding when:
+
+- Caller is frustrated
+- Request is complex
+- High-value opportunity
+- Regulatory requirements
+- Personal preference
+
+### Maintaining Experience
+
+Ensure smooth transitions:
+
+- Set clear expectations
+- Provide context
+- Minimize wait times
+- Follow up after transfer
+
+---
+
+*Return to [Inbound Calls Overview](/docs/inbound-calls/basics).*

@@ -23,6 +23,19 @@ import CoreConcepts from "./pages/docs/CoreConcepts";
 import WhatIsSpotzy from "./pages/docs/introduction/WhatIsSpotzy";
 import HowItWorks from "./pages/docs/introduction/HowItWorks";
 import KeyTerminology from "./pages/docs/introduction/KeyTerminology";
+import AccountSetup from "./pages/docs/getting-started/AccountSetup";
+import Billing from "./pages/docs/getting-started/Billing";
+import AssistantsOverview from "./pages/docs/ai-assistants/Overview";
+import AssistantsCreating from "./pages/docs/ai-assistants/Creating";
+import AssistantsModes from "./pages/docs/ai-assistants/Modes";
+import AssistantsTesting from "./pages/docs/ai-assistants/Testing";
+import AssistantsConfiguration from "./pages/docs/ai-assistants/Configuration";
+import AssistantsGeneral from "./pages/docs/ai-assistants/settings/General";
+import AssistantsPromptTools from "./pages/docs/ai-assistants/settings/PromptAndTools";
+import AssistantsVoice from "./pages/docs/ai-assistants/settings/Voice";
+import CampaignsOverview from "./pages/docs/campaigns/Overview";
+import CampaignsCreating from "./pages/docs/campaigns/Creating";
+import CampaignsManaging from "./pages/docs/campaigns/Managing";
 import Features from "./pages/docs/Features";
 import FirstAgent from "./pages/docs/FirstAgent";
 import VoiceConfig from "./pages/docs/VoiceConfig";
@@ -68,6 +81,19 @@ const App = () => (
           <Route path="/docs/introduction/what-is-spotzy" element={<WhatIsSpotzy />} />
           <Route path="/docs/introduction/how-it-works" element={<HowItWorks />} />
           <Route path="/docs/introduction/key-terminology" element={<KeyTerminology />} />
+          <Route path="/docs/getting-started/account-setup" element={<AccountSetup />} />
+          <Route path="/docs/getting-started/billing" element={<Billing />} />
+          <Route path="/docs/ai-assistants/overview" element={<AssistantsOverview />} />
+          <Route path="/docs/ai-assistants/creating" element={<AssistantsCreating />} />
+          <Route path="/docs/ai-assistants/modes" element={<AssistantsModes />} />
+          <Route path="/docs/ai-assistants/testing" element={<AssistantsTesting />} />
+          <Route path="/docs/ai-assistants/configuration" element={<AssistantsConfiguration />} />
+          <Route path="/docs/ai-assistants/settings/general" element={<AssistantsGeneral />} />
+          <Route path="/docs/ai-assistants/settings/prompt-and-tools" element={<AssistantsPromptTools />} />
+          <Route path="/docs/ai-assistants/settings/voice" element={<AssistantsVoice />} />
+          <Route path="/docs/campaigns/overview" element={<CampaignsOverview />} />
+          <Route path="/docs/campaigns/creating" element={<CampaignsCreating />} />
+          <Route path="/docs/campaigns/managing" element={<CampaignsManaging />} />
           <Route path="/docs/quick-start" element={<QuickStart />} />
           <Route path="/docs/core-concepts" element={<CoreConcepts />} />
           <Route path="/docs/features" element={<Features />} />

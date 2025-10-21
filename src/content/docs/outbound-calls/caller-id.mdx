@@ -1,0 +1,113 @@
+---
+title: "Caller ID Configuration"
+description: "Managing outbound caller ID display"
+---
+
+# Caller ID Configuration
+
+Configure what phone number appears when your AI assistant makes outbound calls.
+
+## Why Caller ID Matters
+
+### Answer Rates
+
+Local caller ID improves answer rates:
+
+- **Local numbers**: Up to 4x better answer rate
+- **Toll-free**: Professional but lower answer rate
+- **Unknown**: Often ignored
+- **Blocked**: Rarely answered
+
+### Brand Recognition
+
+Consistent caller ID builds:
+
+- Trust and recognition
+- Brand awareness
+- Professional image
+- Call-back option
+
+## Caller ID Options
+
+### Use Your Numbers
+
+Display numbers you own:
+
+- **Primary**: Main business line
+- **Local**: Match recipient area code
+- **Toll-free**: Brand number
+- **Department**: Specific line
+
+### Number Pools
+
+Rotate through multiple numbers:
+
+- **Local presence**: Match each area code
+- **Carrier compliance**: Avoid spam flags
+- **Volume distribution**: Prevent blocking
+- **Fallback options**: Redundancy
+
+## Configuration
+
+### Setting Default Caller ID
+
+1. Go to Campaigns or Assistant settings
+2. Select "Caller ID"
+3. Choose from your numbers
+4. Set as default
+5. Save changes
+
+### Dynamic Caller ID
+
+Match recipient location:
+
+```
+If recipient area code = 212 (NYC)
+Use caller ID with 212 area code
+
+If recipient area code = 415 (SF)
+Use caller ID with 415 area code
+```
+
+## Compliance
+
+### STIR/SHAKEN
+
+Caller ID authentication:
+
+- **Verified**: Green checkmark
+- **Unverified**: No indicator
+- **Spoofed**: Red warning
+
+### Registration
+
+Register your numbers:
+
+- **Carrier registration**: Verify legitimacy
+- **Brand registration**: Company info
+- **Campaign registration**: Use case description
+
+## Troubleshooting
+
+### Common Issues
+
+**Calls marked as spam:**
+- Register with carriers
+- Reduce call volume
+- Vary caller IDs
+- Improve answer rates
+
+**Caller ID not displaying:**
+- Verify number ownership
+- Check carrier settings
+- Confirm CNAM registration
+- Contact support
+
+**Wrong name showing:**
+- Update CNAM record
+- Wait 24-48 hours for propagation
+- Verify with multiple carriers
+
+---
+
+*Continue to [Voicemail](/docs/outbound-calls/voicemail).*

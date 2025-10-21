@@ -1,0 +1,182 @@
+---
+title: "Prompt Engineering"
+description: "Writing effective prompts for AI assistants"
+---
+
+# Prompt Engineering
+
+Master the art of writing prompts that create effective AI assistant conversations.
+
+## What is Prompt Engineering?
+
+Prompt engineering is the practice of crafting instructions that guide your AI assistant's behavior, personality, and capabilities.
+
+### Why It Matters
+
+Good prompts lead to:
+
+- **Natural conversations**: Human-like interactions
+- **Consistent behavior**: Predictable responses
+- **Goal achievement**: Better outcomes
+- **Brand alignment**: On-brand personality
+
+## Prompt Structure
+
+### Essential Components
+
+Every prompt should include:
+
+1. **Role definition**: Who the assistant is
+2. **Objectives**: What it should accomplish
+3. **Personality**: How it should behave
+4. **Constraints**: What to avoid
+5. **Examples**: Sample interactions
+
+### Basic Template
+
+```
+You are [ROLE] for [COMPANY].
+
+Your primary objectives:
+- [Objective 1]
+- [Objective 2]
+- [Objective 3]
+
+Personality traits:
+- [Trait 1]
+- [Trait 2]
+
+Never:
+- [Constraint 1]
+- [Constraint 2]
+
+Example interaction:
+Caller: [Question]
+You: [Ideal response]
+```
+
+## Writing Effective Prompts
+
+### Be Specific
+
+❌ **Vague:**
+```
+Be helpful and answer questions.
+```
+
+✅ **Specific:**
+```
+You are a knowledgeable sales assistant. When asked about pricing, provide our standard rates and ask about their budget and needs to recommend the best plan.
+```
+
+### Define Personality
+
+Create consistent character:
+
+```
+Communication style:
+- Warm and friendly, but professional
+- Patient with questions
+- Enthusiastic about our product
+- Empathetic to concerns
+- Concise and clear
+```
+
+### Set Boundaries
+
+Clearly define limits:
+
+```
+You cannot:
+- Make refund decisions (transfer to billing)
+- Provide medical advice
+- Promise specific outcomes
+- Discount below 10%
+- Access account passwords
+```
+
+### Include Examples
+
+Show desired behavior:
+
+```
+Example 1 - Price Question:
+Caller: "How much does it cost?"
+You: "Great question! Our plans start at $99/month for our Starter package, which includes [features]. Can you tell me a bit about your needs so I can recommend the best fit?"
+
+Example 2 - Objection:
+Caller: "That seems expensive."
+You: "I understand budget is important. Many customers find the ROI worth it because [value]. What specific concerns do you have about the pricing?"
+```
+
+## Advanced Techniques
+
+### Context Variables
+
+Use dynamic information:
+
+```
+Greet the caller: "Hi {{first_name}}, thanks for your interest in {{product}}."
+
+Reference history: "I see you attended our webinar on {{date}}. What questions did that bring up?"
+```
+
+### Conditional Logic
+
+Handle different scenarios:
+
+```
+If caller is existing customer:
+  - Thank them for their business
+  - Ask about their experience
+  - Offer upgrades or add-ons
+
+If caller is new prospect:
+  - Learn about their needs
+  - Qualify budget and timeline
+  - Schedule demo
+```
+
+### Tone Adaptation
+
+Adjust based on context:
+
+```
+If caller is frustrated:
+  - Use empathetic language
+  - Acknowledge their concern
+  - Focus on solutions
+  - Offer escalation if needed
+
+If caller is enthusiastic:
+  - Match their energy
+  - Move forward quickly
+  - Capitalize on momentum
+```
+
+## Testing and Iteration
+
+### Evaluation Criteria
+
+Test prompts for:
+
+- **Accuracy**: Correct information
+- **Tone**: Appropriate personality
+- **Efficiency**: Concise responses
+- **Goal achievement**: Desired outcomes
+- **Edge cases**: Unusual situations
+
+### Iterative Improvement
+
+1. Write initial prompt
+2. Test with various scenarios
+3. Identify issues
+4. Refine prompt
+5. Retest
+6. Deploy
+7. Monitor real performance
+8. Continue optimizing
+
+---
+
+*Learn about [Knowledge Base](/docs/conversation-design/knowledge-base).*
