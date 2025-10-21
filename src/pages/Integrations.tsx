@@ -282,6 +282,12 @@ const integrations = [
   { name: "Mavenlink", category: "Project Management", logo: "🔗" },
   { name: "Function Point", category: "Project Management", logo: "📍" },
   { name: "Podio", category: "Project Management", logo: "🎪" },
+  { name: "Scoro", category: "Project Management", logo: "⭐" },
+  { name: "Freedcamp", category: "Project Management", logo: "🏕️" },
+  { name: "Redbooth", category: "Project Management", logo: "📍" },
+  { name: "Paymo", category: "Project Management", logo: "💼" },
+  { name: "nTask", category: "Project Management", logo: "✔️" },
+  { name: "ProofHub", category: "Project Management", logo: "🏠" },
 ];
 
 const Integrations = () => {
@@ -305,7 +311,7 @@ const Integrations = () => {
             <span className="text-primary">Integrations</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Connect with 250+ popular tools and platforms using our no-code platform
+            Connect with 265+ popular tools and platforms using our no-code platform
           </p>
         </div>
       </section>
