@@ -18,7 +18,6 @@ const IndustryComparison = () => {
                   <X className="h-5 w-5 text-destructive mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">High Monthly Costs</p>
-                    <p className="text-sm text-muted-foreground">$3,000+ per employee</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
