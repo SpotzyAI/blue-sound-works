@@ -38,7 +38,7 @@ const Hero = () => {
             <Button variant="outline" size="lg" className="group" asChild>
               <a href="/contact">
                 <Play className="mr-2 h-5 w-5" />
-                Watch Demo
+                Contact Us
               </a>
             </Button>
           </div>
