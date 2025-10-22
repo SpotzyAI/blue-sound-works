@@ -81,7 +81,7 @@ const Navigation = () => {
     {
       icon: BookOpen,
       title: "Languages",
-      description: "Explore 100+ languages and voices",
+      description: "Explore 36 languages and voices",
       href: "/languages",
     },
     {

@@ -20,23 +20,35 @@ const languages = [
   { code: "IT", name: "Italian", voiceCount: 25, region: "Europe", popular: true },
   { code: "PT", name: "Portuguese", voiceCount: 24, region: "Europe", popular: true },
   { code: "ZH", name: "Chinese", voiceCount: 30, region: "Asia", popular: true },
-  { code: "JA", name: "Japanese", voiceCount: 22, region: "Asia", popular: false },
-  { code: "KO", name: "Korean", voiceCount: 20, region: "Asia", popular: false },
-  { code: "AR", name: "Arabic", voiceCount: 18, region: "Middle East", popular: false },
-  { code: "RU", name: "Russian", voiceCount: 16, region: "Europe", popular: false },
-  { code: "NL", name: "Dutch", voiceCount: 15, region: "Europe", popular: false },
-  { code: "PL", name: "Polish", voiceCount: 14, region: "Europe", popular: false },
-  { code: "TR", name: "Turkish", voiceCount: 12, region: "Middle East", popular: false },
-  { code: "SV", name: "Swedish", voiceCount: 11, region: "Europe", popular: false },
+  { code: "AR", name: "Arabic", voiceCount: 22, region: "Middle East", popular: false },
+  { code: "BG", name: "Bulgarian", voiceCount: 8, region: "Europe", popular: false },
+  { code: "HR", name: "Croatian", voiceCount: 7, region: "Europe", popular: false },
+  { code: "CS", name: "Czech", voiceCount: 9, region: "Europe", popular: false },
   { code: "DA", name: "Danish", voiceCount: 10, region: "Europe", popular: false },
-  { code: "NO", name: "Norwegian", voiceCount: 10, region: "Europe", popular: false },
+  { code: "NL", name: "Dutch", voiceCount: 15, region: "Europe", popular: false },
   { code: "FI", name: "Finnish", voiceCount: 9, region: "Europe", popular: false },
-  { code: "CS", name: "Czech", voiceCount: 8, region: "Europe", popular: false },
+  { code: "KA", name: "Georgian", voiceCount: 5, region: "Europe", popular: false },
+  { code: "EL", name: "Greek", voiceCount: 8, region: "Europe", popular: false },
+  { code: "HE", name: "Hebrew", voiceCount: 7, region: "Middle East", popular: false },
+  { code: "HI", name: "Hindi", voiceCount: 18, region: "Asia", popular: false },
   { code: "HU", name: "Hungarian", voiceCount: 8, region: "Europe", popular: false },
+  { code: "JA", name: "Japanese", voiceCount: 20, region: "Asia", popular: false },
+  { code: "KK", name: "Kazakh", voiceCount: 5, region: "Asia", popular: false },
+  { code: "LT", name: "Lithuanian", voiceCount: 6, region: "Europe", popular: false },
+  { code: "NO", name: "Norwegian", voiceCount: 10, region: "Europe", popular: false },
+  { code: "PL", name: "Polish", voiceCount: 14, region: "Europe", popular: false },
   { code: "RO", name: "Romanian", voiceCount: 7, region: "Europe", popular: false },
-  { code: "EL", name: "Greek", voiceCount: 7, region: "Europe", popular: false },
-  { code: "HE", name: "Hebrew", voiceCount: 6, region: "Middle East", popular: false },
-  { code: "TH", name: "Thai", voiceCount: 6, region: "Asia", popular: false },
+  { code: "RU", name: "Russian", voiceCount: 16, region: "Europe", popular: false },
+  { code: "SL", name: "Slovenian", voiceCount: 6, region: "Europe", popular: false },
+  { code: "SV", name: "Swedish", voiceCount: 11, region: "Europe", popular: false },
+  { code: "DE-CH", name: "Swiss German", voiceCount: 5, region: "Europe", popular: false },
+  { code: "TA", name: "Tamil", voiceCount: 6, region: "Asia", popular: false },
+  { code: "TR", name: "Turkish", voiceCount: 12, region: "Middle East", popular: false },
+  { code: "UK", name: "Ukrainian", voiceCount: 8, region: "Europe", popular: false },
+  { code: "UR", name: "Urdu", voiceCount: 7, region: "Asia", popular: false },
+  { code: "UZ", name: "Uzbek", voiceCount: 5, region: "Asia", popular: false },
+  { code: "SQ", name: "Albanian", voiceCount: 5, region: "Europe", popular: false },
+  { code: "FIL", name: "Filipino", voiceCount: 8, region: "Asia", popular: false },
 ];
 
 const popularLanguages = [
@@ -76,14 +88,14 @@ const Languages = () => {
             AI Voice <span className="text-primary">Languages</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-12 animate-fade-in">
-            Explore 100+ languages with hundreds of natural AI voices powered by advanced neural networks
+            Explore 36 languages with hundreds of natural AI voices powered by advanced neural networks
           </p>
 
           {/* Stats Grid */}
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
             <div className="bg-card border border-border rounded-xl p-6 shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in">
               <Globe2 className="h-8 w-8 text-primary mx-auto mb-3" />
-              <div className="text-3xl font-bold text-primary mb-1">100+</div>
+              <div className="text-3xl font-bold text-primary mb-1">36</div>
               <div className="text-sm text-muted-foreground">Languages</div>
             </div>
             <div className="bg-card border border-border rounded-xl p-6 shadow-elegant hover:shadow-glow transition-all duration-300 animate-fade-in">

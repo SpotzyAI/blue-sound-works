@@ -24,7 +24,7 @@ const features = [
   {
     icon: Globe,
     title: "Multi-Language",
-    description: "Support for 40+ languages with native accent recognition and cultural adaptation.",
+    description: "Support for 36 languages with native accent recognition and cultural adaptation.",
   },
   {
     icon: Headphones,
