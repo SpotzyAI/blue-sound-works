@@ -49,7 +49,12 @@ const Pricing = () => {
           <p className="text-lg text-muted-foreground mb-8">
             Compare our plans and choose the best one for you.
           </p>
-          <Button variant="hero" size="lg" className="group">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="group"
+            onClick={() => window.location.href = "https://platform.spotzyai.com"}
+          >
             Sign up now
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
