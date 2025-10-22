@@ -1,5 +1,4 @@
 import { Phone, MessageSquare, Calendar, ShoppingCart } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const useCases = [
   {
@@ -61,23 +60,12 @@ const UseCases = () => {
                   </span>
                 </div>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed">
                   {useCase.description}
                 </p>
-                
-                <Button variant="ghost" className="group/btn text-primary hover:text-primary-foreground hover:bg-primary">
-                  Learn More
-                  <span className="ml-2 group-hover/btn:translate-x-1 transition-transform">→</span>
-                </Button>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center">
-          <Button variant="hero" size="lg">
-            Explore All Use Cases
-          </Button>
         </div>
       </div>
     </section>
