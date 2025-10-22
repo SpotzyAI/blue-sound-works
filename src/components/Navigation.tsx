@@ -30,6 +30,12 @@ const Navigation = () => {
       description: "Connect with your favorite tools",
       href: "/integrations",
     },
+    {
+      icon: BookOpen,
+      title: "Languages",
+      description: "Explore 36 languages and voices",
+      href: "/languages",
+    },
   ];
 
   const industryItems = [
@@ -90,12 +96,6 @@ const Navigation = () => {
   ];
 
   const resourceItems = [
-    {
-      icon: BookOpen,
-      title: "Languages",
-      description: "Explore 36 languages and voices",
-      href: "/languages",
-    },
     {
       icon: Mail,
       title: "Contact",
