@@ -1,19 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroBackground})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background" />
       </div>
 
@@ -45,22 +40,12 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-col items-center gap-4">
-            <p className="text-sm text-muted-foreground">Trusted by innovative companies worldwide</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              <div className="text-2xl font-bold">TechCorp</div>
-              <div className="text-2xl font-bold">InnovateLabs</div>
-              <div className="text-2xl font-bold">VoiceFlow</div>
-              <div className="text-2xl font-bold">AIStream</div>
-            </div>
-          </div>
+          
         </div>
       </div>
 
       {/* Gradient Overlay Bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
