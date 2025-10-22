@@ -123,19 +123,19 @@ const Pricing = () => {
             {plans.map((plan, index) => (
               <Card
                 key={plan.name}
-                className={`p-8 relative hover:shadow-lg transition-all duration-300 ${
-                  plan.popular ? "border-primary border-2 scale-105" : ""
+                className={`p-8 relative hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 ${
+                  plan.popular ? "border-primary border-2 scale-105 shadow-glow animate-glow-pulse" : "hover:border-primary/50"
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-hero text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-glow animate-glow-pulse">
                     Most Popular
                   </div>
                 )}
 
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10">
+                  <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-all duration-300">
                     <plan.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold">{plan.name}</h3>
@@ -167,7 +167,9 @@ const Pricing = () => {
 
                 <Button
                   variant={plan.popular ? "hero" : "outline"}
-                  className="w-full mb-6"
+                  className={`w-full mb-6 transition-all duration-300 ${
+                    plan.popular ? "hover:shadow-glow hover:scale-105" : "hover:shadow-luxury hover:scale-105 hover:border-primary/50"
+                  }`}
                   size="lg"
                   onClick={() => {
                     if (plan.monthlyPrice) {
@@ -180,7 +182,11 @@ const Pricing = () => {
 
                 <div className="space-y-3">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
+                    <div 
+                      key={idx} 
+                      className="flex items-start gap-3 animate-slide-in"
+                      style={{ animationDelay: `${idx * 50}ms` }}
+                    >
                       <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-foreground">{feature}</span>
                     </div>

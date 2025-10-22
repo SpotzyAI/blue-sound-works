@@ -37,7 +37,7 @@ const Features = () => {
   return (
     <section id="features" className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Everything You Need to Build <span className="text-primary">Powerful Voice AI</span>
           </h2>
@@ -50,12 +50,13 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-soft"
+              className="group p-8 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-luxury hover:-translate-y-2 animate-scale-in"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="h-7 w-7 text-primary" />
+              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
+                <feature.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}

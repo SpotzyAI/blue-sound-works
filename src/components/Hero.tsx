@@ -15,29 +15,29 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 animate-fade-in hover:bg-primary/20 transition-all duration-300">
             <span className="text-sm text-primary font-medium">🚀 Next Generation Voice AI</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Build Intelligent <span className="text-primary">Voice Assistants</span> in Minutes
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
+            Build Intelligent <span className="text-primary bg-clip-text">Voice Assistants</span> in Minutes
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Create production-ready AI voice agents with enterprise-grade capabilities. 
             No code required. Deploy at scale.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button variant="hero" size="lg" className="group" asChild>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{ animationDelay: '0.4s' }}>
+            <Button variant="hero" size="lg" className="group transition-all duration-300 hover:scale-105 hover:shadow-glow" asChild>
               <a href="/contact">
                 Start Building Free
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="group" asChild>
+            <Button variant="outline" size="lg" className="group transition-all duration-300 hover:scale-105 hover:shadow-luxury hover:border-primary/50" asChild>
               <a href="/contact">
-                <Play className="mr-2 h-5 w-5" />
+                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
                 Contact Us
               </a>
             </Button>
