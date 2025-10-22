@@ -13,42 +13,42 @@ import {
 } from "@/components/ui/select";
 
 const languages = [
-  { code: "EN", name: "English", voiceCount: 45, region: "Europe", popular: true },
-  { code: "ES", name: "Spanish", voiceCount: 38, region: "Europe", popular: true },
-  { code: "FR", name: "French", voiceCount: 32, region: "Europe", popular: true },
-  { code: "DE", name: "German", voiceCount: 28, region: "Europe", popular: true },
-  { code: "IT", name: "Italian", voiceCount: 25, region: "Europe", popular: true },
-  { code: "PT", name: "Portuguese", voiceCount: 24, region: "Europe", popular: true },
-  { code: "ZH", name: "Chinese", voiceCount: 30, region: "Asia", popular: true },
-  { code: "AR", name: "Arabic", voiceCount: 22, region: "Middle East", popular: false },
-  { code: "BG", name: "Bulgarian", voiceCount: 8, region: "Europe", popular: false },
-  { code: "HR", name: "Croatian", voiceCount: 7, region: "Europe", popular: false },
-  { code: "CS", name: "Czech", voiceCount: 9, region: "Europe", popular: false },
-  { code: "DA", name: "Danish", voiceCount: 10, region: "Europe", popular: false },
-  { code: "NL", name: "Dutch", voiceCount: 15, region: "Europe", popular: false },
-  { code: "FI", name: "Finnish", voiceCount: 9, region: "Europe", popular: false },
-  { code: "KA", name: "Georgian", voiceCount: 5, region: "Europe", popular: false },
-  { code: "EL", name: "Greek", voiceCount: 8, region: "Europe", popular: false },
-  { code: "HE", name: "Hebrew", voiceCount: 7, region: "Middle East", popular: false },
-  { code: "HI", name: "Hindi", voiceCount: 18, region: "Asia", popular: false },
-  { code: "HU", name: "Hungarian", voiceCount: 8, region: "Europe", popular: false },
-  { code: "JA", name: "Japanese", voiceCount: 20, region: "Asia", popular: false },
-  { code: "KK", name: "Kazakh", voiceCount: 5, region: "Asia", popular: false },
-  { code: "LT", name: "Lithuanian", voiceCount: 6, region: "Europe", popular: false },
-  { code: "NO", name: "Norwegian", voiceCount: 10, region: "Europe", popular: false },
-  { code: "PL", name: "Polish", voiceCount: 14, region: "Europe", popular: false },
-  { code: "RO", name: "Romanian", voiceCount: 7, region: "Europe", popular: false },
-  { code: "RU", name: "Russian", voiceCount: 16, region: "Europe", popular: false },
-  { code: "SL", name: "Slovenian", voiceCount: 6, region: "Europe", popular: false },
-  { code: "SV", name: "Swedish", voiceCount: 11, region: "Europe", popular: false },
-  { code: "DE-CH", name: "Swiss German", voiceCount: 5, region: "Europe", popular: false },
-  { code: "TA", name: "Tamil", voiceCount: 6, region: "Asia", popular: false },
-  { code: "TR", name: "Turkish", voiceCount: 12, region: "Middle East", popular: false },
-  { code: "UK", name: "Ukrainian", voiceCount: 8, region: "Europe", popular: false },
-  { code: "UR", name: "Urdu", voiceCount: 7, region: "Asia", popular: false },
-  { code: "UZ", name: "Uzbek", voiceCount: 5, region: "Asia", popular: false },
-  { code: "SQ", name: "Albanian", voiceCount: 5, region: "Europe", popular: false },
-  { code: "FIL", name: "Filipino", voiceCount: 8, region: "Asia", popular: false },
+  { code: "EN", name: "English", voiceCount: 45, region: "Europe", popular: true, flag: "🇬🇧" },
+  { code: "ES", name: "Spanish", voiceCount: 38, region: "Europe", popular: true, flag: "🇪🇸" },
+  { code: "FR", name: "French", voiceCount: 32, region: "Europe", popular: true, flag: "🇫🇷" },
+  { code: "DE", name: "German", voiceCount: 28, region: "Europe", popular: true, flag: "🇩🇪" },
+  { code: "IT", name: "Italian", voiceCount: 25, region: "Europe", popular: true, flag: "🇮🇹" },
+  { code: "PT", name: "Portuguese", voiceCount: 24, region: "Europe", popular: true, flag: "🇵🇹" },
+  { code: "ZH", name: "Chinese", voiceCount: 30, region: "Asia", popular: true, flag: "🇨🇳" },
+  { code: "AR", name: "Arabic", voiceCount: 22, region: "Middle East", popular: false, flag: "🇸🇦" },
+  { code: "BG", name: "Bulgarian", voiceCount: 8, region: "Europe", popular: false, flag: "🇧🇬" },
+  { code: "HR", name: "Croatian", voiceCount: 7, region: "Europe", popular: false, flag: "🇭🇷" },
+  { code: "CS", name: "Czech", voiceCount: 9, region: "Europe", popular: false, flag: "🇨🇿" },
+  { code: "DA", name: "Danish", voiceCount: 10, region: "Europe", popular: false, flag: "🇩🇰" },
+  { code: "NL", name: "Dutch", voiceCount: 15, region: "Europe", popular: false, flag: "🇳🇱" },
+  { code: "FI", name: "Finnish", voiceCount: 9, region: "Europe", popular: false, flag: "🇫🇮" },
+  { code: "KA", name: "Georgian", voiceCount: 5, region: "Europe", popular: false, flag: "🇬🇪" },
+  { code: "EL", name: "Greek", voiceCount: 8, region: "Europe", popular: false, flag: "🇬🇷" },
+  { code: "HE", name: "Hebrew", voiceCount: 7, region: "Middle East", popular: false, flag: "🇮🇱" },
+  { code: "HI", name: "Hindi", voiceCount: 18, region: "Asia", popular: false, flag: "🇮🇳" },
+  { code: "HU", name: "Hungarian", voiceCount: 8, region: "Europe", popular: false, flag: "🇭🇺" },
+  { code: "JA", name: "Japanese", voiceCount: 20, region: "Asia", popular: false, flag: "🇯🇵" },
+  { code: "KK", name: "Kazakh", voiceCount: 5, region: "Asia", popular: false, flag: "🇰🇿" },
+  { code: "LT", name: "Lithuanian", voiceCount: 6, region: "Europe", popular: false, flag: "🇱🇹" },
+  { code: "NO", name: "Norwegian", voiceCount: 10, region: "Europe", popular: false, flag: "🇳🇴" },
+  { code: "PL", name: "Polish", voiceCount: 14, region: "Europe", popular: false, flag: "🇵🇱" },
+  { code: "RO", name: "Romanian", voiceCount: 7, region: "Europe", popular: false, flag: "🇷🇴" },
+  { code: "RU", name: "Russian", voiceCount: 16, region: "Europe", popular: false, flag: "🇷🇺" },
+  { code: "SL", name: "Slovenian", voiceCount: 6, region: "Europe", popular: false, flag: "🇸🇮" },
+  { code: "SV", name: "Swedish", voiceCount: 11, region: "Europe", popular: false, flag: "🇸🇪" },
+  { code: "DE-CH", name: "Swiss German", voiceCount: 5, region: "Europe", popular: false, flag: "🇨🇭" },
+  { code: "TA", name: "Tamil", voiceCount: 6, region: "Asia", popular: false, flag: "🇮🇳" },
+  { code: "TR", name: "Turkish", voiceCount: 12, region: "Middle East", popular: false, flag: "🇹🇷" },
+  { code: "UK", name: "Ukrainian", voiceCount: 8, region: "Europe", popular: false, flag: "🇺🇦" },
+  { code: "UR", name: "Urdu", voiceCount: 7, region: "Asia", popular: false, flag: "🇵🇰" },
+  { code: "UZ", name: "Uzbek", voiceCount: 5, region: "Asia", popular: false, flag: "🇺🇿" },
+  { code: "SQ", name: "Albanian", voiceCount: 5, region: "Europe", popular: false, flag: "🇦🇱" },
+  { code: "FIL", name: "Filipino", voiceCount: 8, region: "Asia", popular: false, flag: "🇵🇭" },
 ];
 
 const popularLanguages = [
@@ -192,8 +192,8 @@ const Languages = () => {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="relative mb-4">
-                  <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center text-2xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    {language.code}
+                  <div className="w-20 h-20 rounded-xl flex items-center justify-center text-6xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {language.flag}
                   </div>
                   {language.popular && (
                     <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-semibold">
@@ -208,18 +208,11 @@ const Languages = () => {
                   {language.region}
                 </p>
                 
-                <div className="flex items-center gap-2 mb-4 text-sm">
+                <div className="flex items-center gap-2 text-sm">
                   <Mic className="h-4 w-4 text-primary" />
                   <span className="font-semibold text-primary">{language.voiceCount}</span>
                   <span className="text-muted-foreground">voices</span>
                 </div>
-                
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
-                >
-                  Explore Voices
-                </Button>
               </div>
             ))}
           </div>
