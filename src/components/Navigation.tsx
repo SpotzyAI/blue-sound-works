@@ -99,7 +99,7 @@ const Navigation = () => {
       icon: Clock,
       title: "Documentation",
       description: "Learn how to use our platform",
-      href: "/docs",
+      href: "https://docs.spotzyai.com",
     },
   ];
 
