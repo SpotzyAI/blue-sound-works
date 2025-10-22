@@ -23,10 +23,14 @@ const Hero = () => {
             Build Intelligent <span className="text-primary bg-clip-text">Voice Assistants</span> in Minutes
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Create production-ready AI voice agents with enterprise-grade capabilities. 
             No code required. Deploy at scale.
           </p>
+
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury" style={{ animationDelay: '0.3s' }}>
+            <span className="text-lg font-semibold text-white">🎉 Create Your Account & First AI Assistant FREE</span>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{ animationDelay: '0.4s' }}>
             <Button variant="hero" size="lg" className="group transition-all duration-300 hover:scale-105 hover:shadow-glow" asChild>
