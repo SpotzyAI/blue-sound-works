@@ -207,10 +207,19 @@ const Navigation = () => {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" className="hidden md:inline-flex transition-all duration-300 hover:scale-105">
+            <Button 
+              variant="ghost" 
+              className="hidden md:inline-flex transition-all duration-300 hover:scale-105"
+              onClick={() => window.location.href = "https://platform.spotzyai.com"}
+            >
               Sign In
             </Button>
-            <Button variant="hero" size="default" className="transition-all duration-300 hover:scale-105 hover:shadow-glow">
+            <Button 
+              variant="hero" 
+              size="default" 
+              className="transition-all duration-300 hover:scale-105 hover:shadow-glow"
+              onClick={() => window.location.href = "https://platform.spotzyai.com"}
+            >
               Get Started
             </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
