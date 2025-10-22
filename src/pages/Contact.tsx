@@ -36,15 +36,29 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form data:", data);
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      const result = await response.json();
+      console.log("Email sent with reference:", result.referenceNumber);
       
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      toast.success("Message sent successfully! We'll get back to you soon.");
+      toast.success("Message sent successfully! Check your email for confirmation.");
       reset();
     } catch (error) {
+      console.error("Error sending message:", error);
       toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
