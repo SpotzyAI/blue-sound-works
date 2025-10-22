@@ -105,12 +105,12 @@ const RestaurantPricingCard = () => {
                   key={plan.name}
                   className={`p-8 relative transition-all duration-300 ${
                     plan.popular
-                      ? "border-[hsl(210,100%,50%)] bg-[hsl(210,100%,50%)] text-white border-2 shadow-glow scale-105"
+                      ? "border-primary bg-primary text-white border-2 shadow-glow scale-105"
                       : "hover:shadow-lg"
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-[hsl(210,100%,50%)] px-6 py-2 rounded-full text-sm font-bold shadow-soft">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-primary px-6 py-2 rounded-full text-sm font-bold shadow-soft">
                       MOST POPULAR
                     </div>
                   )}
@@ -142,7 +142,7 @@ const RestaurantPricingCard = () => {
 
                   <Button
                     variant={plan.popular ? "secondary" : "hero"}
-                    className={`w-full mb-6 group ${plan.popular ? "bg-white text-[hsl(210,100%,50%)] hover:bg-white/90" : ""}`}
+                    className={`w-full mb-6 group ${plan.popular ? "bg-white text-primary hover:bg-white/90" : ""}`}
                     size="lg"
                   >
                     Contact Us for Demo
