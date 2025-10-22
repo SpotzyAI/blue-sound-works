@@ -54,7 +54,7 @@ const FeatureShowcase = () => {
                 <div className="p-3 rounded-full bg-destructive/20">
                   <XCircle className="h-6 w-6 text-destructive" />
                 </div>
-                <h3 className="text-xl font-bold">Traditional Systems</h3>
+                <h3 className="text-xl font-bold">Traditional Way</h3>
               </div>
               <p className="text-muted-foreground mb-4">
                 Customer calls → Leave message → Staff checks later → Call back customer → Maybe available → Confirm
@@ -75,6 +75,30 @@ const FeatureShowcase = () => {
                 <li className="flex items-start gap-2">
                   <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
                   <span className="text-sm">Staff time wasted</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Language barriers</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">1 call per time</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Limited hours answering (open hours)</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Staff leaving</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Staff mood swings</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <XCircle className="h-5 w-5 text-destructive mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Customers on hold</span>
                 </li>
               </ul>
             </div>
