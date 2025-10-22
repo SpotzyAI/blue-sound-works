@@ -59,7 +59,7 @@ const Footer = () => {
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
             </ul>
           </div>
         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
           </p>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a>
+            <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookies</a>
           </div>
         </div>

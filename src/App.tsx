@@ -8,6 +8,7 @@ import Languages from "./pages/Languages";
 import Integrations from "./pages/Integrations";
 import IntegrationDetail from "./pages/IntegrationDetail";
 import Pricing from "./pages/Pricing";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import Healthcare from "./pages/industries/Healthcare";
 import Ecommerce from "./pages/industries/Ecommerce";
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/industries/restaurant" element={<Restaurant />} />
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/car-dealership" element={<CarDealership />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
