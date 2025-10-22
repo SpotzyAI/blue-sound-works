@@ -757,42 +757,22 @@ const Integrations = () => {
           </div>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {paginatedIntegrations.map((integration, index) => (
-              <div
+              <a
                 key={integration.name}
-                className="group bg-card border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 flex flex-col items-center text-center animate-fade-in"
+                href={`/integration/${integration.name.toLowerCase().replace(/\s+/g, '-')}`}
+                className="group bg-card border border-border rounded-xl p-4 hover:border-primary transition-all duration-300 hover:shadow-sm animate-fade-in flex items-center gap-3"
                 style={{ animationDelay: `${index * 0.02}s` }}
               >
-                <div className="relative mb-4">
-                  <div className="transform group-hover:scale-110 transition-transform duration-300">
-                    {getLogo(integration.name)}
-                    <div className="hidden w-16 h-16 bg-primary/10 rounded-xl items-center justify-center text-2xl font-bold text-primary shadow-lg">
-                      {integration.name.charAt(0)}
-                    </div>
-                  </div>
+                <div className="flex-shrink-0">
+                  {getLogo(integration.name)}
                 </div>
                 
-                <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-base font-semibold group-hover:text-primary transition-colors">
                   {integration.name}
                 </h3>
-                
-                <span className="text-xs text-muted-foreground px-3 py-1 bg-muted rounded-full mb-4 inline-flex items-center gap-1">
-                  <Plug2 className="h-3 w-3" />
-                  {integration.category}
-                </span>
-
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="w-full mt-auto group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
-                  asChild
-                >
-                  <a href={`/integration/${integration.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                    View Details
-                  </a>
-                </Button>
-              </div>
+              </a>
             ))}
           </div>
 
