@@ -2,21 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Sparkles, Zap, Crown, ArrowRight } from "lucide-react";
-import { Slider } from "@/components/ui/slider";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Pricing = () => {
   const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
-  const [callsPerMonth, setCallsPerMonth] = useState([3200]);
-  const [avgCallLength, setAvgCallLength] = useState([3]);
-  const [humanWage, setHumanWage] = useState([25]);
-
-  // Calculate costs
-  const totalMinutes = callsPerMonth[0] * avgCallLength[0];
-  const humanCost = Math.round((totalMinutes / 60) * humanWage[0]);
-  const aiCost = Math.round(totalMinutes * 0.27); // $0.27 per minute estimate
-  const monthlySavings = humanCost - aiCost;
 
   const plans = [
     {
@@ -93,118 +83,6 @@ const Pricing = () => {
             Sign up now
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </div>
-      </section>
-
-      {/* Cost Calculator Section */}
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Benefits */}
-            <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Calculate your savings with <span className="text-primary">AI voice assistants</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Discover how much you can save by automating calls with AI compared to hiring human assistants. 
-                Adjust the sliders to match your needs and see real-time results.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">Instant 24/7 availability</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">Scale to thousands of parallel calls</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">No onboarding or training costs</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <span className="text-foreground">Pay only for active calls duration</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Calculator */}
-            <Card className="p-8 bg-card border-2">
-              <h3 className="text-2xl font-bold mb-6">Cost calculator</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium">Calls per month</label>
-                    <span className="text-primary font-semibold">{callsPerMonth[0]}</span>
-                  </div>
-                  <Slider
-                    value={callsPerMonth}
-                    onValueChange={setCallsPerMonth}
-                    min={100}
-                    max={10000}
-                    step={100}
-                    className="w-full"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium">Average call length (min)</label>
-                    <span className="text-primary font-semibold">{avgCallLength[0]}</span>
-                  </div>
-                  <Slider
-                    value={avgCallLength}
-                    onValueChange={setAvgCallLength}
-                    min={1}
-                    max={15}
-                    step={1}
-                    className="w-full"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-2">
-                    <label className="text-sm font-medium">Human agent hourly wage ($)</label>
-                    <span className="text-primary font-semibold">{humanWage[0]}</span>
-                  </div>
-                  <Slider
-                    value={humanWage}
-                    onValueChange={setHumanWage}
-                    min={10}
-                    max={50}
-                    step={5}
-                    className="w-full"
-                  />
-                </div>
-
-                <div className="pt-6 border-t grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 rounded-lg bg-primary/10">
-                    <div className="text-sm text-muted-foreground mb-1">Estimated AI cost</div>
-                    <div className="text-2xl font-bold text-primary">${aiCost.toLocaleString()}</div>
-                  </div>
-                  <div className="text-center p-4 rounded-lg bg-destructive/10">
-                    <div className="text-sm text-muted-foreground mb-1">Estimated human cost</div>
-                    <div className="text-2xl font-bold text-destructive">${humanCost.toLocaleString()}</div>
-                  </div>
-                </div>
-
-                <div className="text-center p-6 rounded-lg bg-gradient-hero">
-                  <div className="text-sm text-primary-foreground/80 mb-1">Monthly savings</div>
-                  <div className="text-4xl font-bold text-primary-foreground">${monthlySavings.toLocaleString()}</div>
-                </div>
-              </div>
-            </Card>
-          </div>
         </div>
       </section>
 
