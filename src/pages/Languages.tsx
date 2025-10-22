@@ -203,16 +203,10 @@ const Languages = () => {
                 </div>
                 
                 <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">{language.name}</h3>
-                <p className="text-xs text-muted-foreground mb-3 flex items-center gap-1">
+                <p className="text-xs text-muted-foreground flex items-center gap-1">
                   <Globe2 className="h-3 w-3" />
                   {language.region}
                 </p>
-                
-                <div className="flex items-center gap-2 text-sm">
-                  <Mic className="h-4 w-4 text-primary" />
-                  <span className="font-semibold text-primary">{language.voiceCount}</span>
-                  <span className="text-muted-foreground">voices</span>
-                </div>
               </div>
             ))}
           </div>
