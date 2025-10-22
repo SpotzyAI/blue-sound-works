@@ -19,6 +19,7 @@ import Services from "./pages/industries/Services";
 import Hospitality from "./pages/industries/Hospitality";
 import Legal from "./pages/industries/Legal";
 import CarDealership from "./pages/industries/CarDealership";
+import Restaurant from "./pages/industries/Restaurant";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +41,7 @@ const App = () => (
           <Route path="/industries/real-estate" element={<RealEstate />} />
           <Route path="/industries/services" element={<Services />} />
           <Route path="/industries/hospitality" element={<Hospitality />} />
-          <Route path="/industries/restaurant" element={<Hospitality />} />
+          <Route path="/industries/restaurant" element={<Restaurant />} />
           <Route path="/industries/legal" element={<Legal />} />
           <Route path="/industries/car-dealership" element={<CarDealership />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
