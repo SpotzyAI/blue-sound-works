@@ -30,17 +30,21 @@ const Hero = () => {
             No code required. Deploy at scale.
           </p>
 
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury" style={{
-          animationDelay: '0.3s'
-        }}>
-            <span className="text-lg font-semibold text-white">Create Your First Assistant For FREE</span>
-          </div>
+          <a 
+            href="https://platform.spotzyai.com" 
+            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury hover:scale-105 transition-transform duration-300 cursor-pointer" 
+            style={{
+              animationDelay: '0.3s'
+            }}
+          >
+            <span className="text-lg font-semibold" style={{ color: '#1434A4' }}>Create Your First Assistant For FREE</span>
+          </a>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{
           animationDelay: '0.4s'
         }}>
             <Button variant="hero" size="lg" className="group transition-all duration-300 hover:scale-105 hover:shadow-glow" asChild>
-              <a href="/contact">
+              <a href="https://platform.spotzyai.com">
                 Start Building Free
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
