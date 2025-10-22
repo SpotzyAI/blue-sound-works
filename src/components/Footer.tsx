@@ -33,7 +33,7 @@ const Footer = () => {
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Features</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Pricing</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Use Cases</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">API Reference</a></li>
+              
             </ul>
           </div>
 
@@ -42,8 +42,8 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-3">
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Blog</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Community</a></li>
+              
+              
               <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Support</a></li>
             </ul>
           </div>
@@ -52,8 +52,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Careers</a></li>
+              
+              
               <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Contact</a></li>
               <li><a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</a></li>
             </ul>
