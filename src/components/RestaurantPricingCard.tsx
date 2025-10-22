@@ -25,7 +25,7 @@ const RestaurantPricingCard = () => {
       monthlyPrice: 199,
       priceNote: "+ VAT / month",
       description: "Perfect for small restaurants",
-      recommended: "1 Assistant",
+      recommended: "For 1 Assistant",
       popular: false,
       setupCost: "€300 + VAT (one-time)",
       additionalCost: "€0.30 / minute",
@@ -47,7 +47,7 @@ const RestaurantPricingCard = () => {
       monthlyPrice: 159,
       priceNote: "+ VAT / month per assistant",
       description: "Ideal for restaurant groups",
-      recommended: "5-10 Assistants",
+      recommended: "For 5-10 Assistants",
       popular: true,
       setupCost: "€200 + VAT per assistant (one-time)",
       additionalCost: "€0.25 / minute",
@@ -70,7 +70,7 @@ const RestaurantPricingCard = () => {
       monthlyPrice: "Custom",
       priceNote: "+ VAT",
       description: "Built for large operations",
-      recommended: "11+ Assistants",
+      recommended: "For 11+ Assistants",
       popular: false,
       setupCost: "Contact us for custom pricing",
       additionalCost: "Contact us",
@@ -96,35 +96,8 @@ const RestaurantPricingCard = () => {
             </p>
           </div>
 
-          {/* Setup Costs */}
-          <div className="mb-16">
-            <div className="max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-6 text-center flex items-center justify-center gap-2">
-                <Settings className="h-6 w-6 text-muted-foreground" />
-                Setup Costs
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {setupCosts.map((item, idx) => (
-                  <Card key={idx} className="p-6 border-2">
-                    <h4 className="text-2xl font-bold mb-4">{item.plan}</h4>
-                    <div className="mb-4">
-                      <p className="text-3xl font-bold text-primary mb-1">
-                        {item.cost} <span className="text-sm text-muted-foreground">+ VAT</span>
-                      </p>
-                      <p className="text-sm text-muted-foreground">(one-time)</p>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-3">{item.note}</p>
-                    <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
-                      <p className="text-sm font-semibold text-primary">{item.highlight}</p>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* Monthly Pricing Plans */}
-          <div className="mb-8">
+          <div className="mb-16">
             <h3 className="text-2xl font-bold mb-8 text-center">Monthly Partnership Plans</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
@@ -194,6 +167,33 @@ const RestaurantPricingCard = () => {
                   </div>
                 </Card>
               ))}
+            </div>
+          </div>
+
+          {/* Setup Costs */}
+          <div className="mb-16">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-6 text-center flex items-center justify-center gap-2">
+                <Settings className="h-6 w-6 text-muted-foreground" />
+                Setup Costs
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {setupCosts.map((item, idx) => (
+                  <Card key={idx} className="p-6 border-2">
+                    <h4 className="text-2xl font-bold mb-4">{item.plan}</h4>
+                    <div className="mb-4">
+                      <p className="text-3xl font-bold text-primary mb-1">
+                        {item.cost} <span className="text-sm text-muted-foreground">+ VAT</span>
+                      </p>
+                      <p className="text-sm text-muted-foreground">(one-time)</p>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-3">{item.note}</p>
+                    <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
+                      <p className="text-sm font-semibold text-primary">{item.highlight}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
 
