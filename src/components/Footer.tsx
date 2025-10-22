@@ -27,10 +27,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Product</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Features</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Pricing</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Use Cases</a></li>
-              
+              <li><a href="/#features" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Features</a></li>
+              <li><a href="/pricing" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Pricing</a></li>
+              <li><a href="/#use-cases" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Use Cases</a></li>
+              <li><a href="/integrations" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Integrations</a></li>
+              <li><a href="/languages" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Languages</a></li>
             </ul>
           </div>
 
@@ -38,10 +39,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Resources</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Documentation</a></li>
-              
-              
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Support</a></li>
+              <li><a href="https://docs.spotzyai.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Documentation</a></li>
+              <li><a href="https://blog.spotzyai.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Blog</a></li>
+              <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Support</a></li>
+              <li><a href="https://help.spotzyai.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Help Center</a></li>
             </ul>
           </div>
 
@@ -49,10 +50,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Company</h4>
             <ul className="space-y-3">
-              
-              
+              <li><a href="https://about.spotzyai.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">About Us</a></li>
+              <li><a href="https://careers.spotzyai.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Careers</a></li>
               <li><a href="/contact" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Contact</a></li>
               <li><a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">Terms of Service</a></li>
             </ul>
           </div>
         </div>
