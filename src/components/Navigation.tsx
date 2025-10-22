@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock } from "lucide-react";
+import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
 import {
   NavigationMenu,
@@ -62,6 +62,12 @@ const Navigation = () => {
       title: "Hospitality",
       description: "AI voice automation for hotels, restaurants & resorts",
       href: "/industries/hospitality",
+    },
+    {
+      icon: ChefHat,
+      title: "Restaurant",
+      description: "Real-time reservation system with AI voice assistants",
+      href: "/industries/restaurant",
     },
     {
       icon: Scale,
