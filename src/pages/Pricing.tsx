@@ -24,7 +24,7 @@ const Pricing = () => {
       icon: Sparkles,
       description: "Start automating calls with voice AI agents.",
       monthlyPrice: 19.99,
-      yearlyPrice: 215.89,
+      yearlyPrice: 17.99,
       originalMonthlyPrice: null,
       features: [
         "75 included minutes, then $0.20 / extra minute",
@@ -41,7 +41,7 @@ const Pricing = () => {
       icon: Zap,
       description: "For small businesses automating inbound and outbound calls.",
       monthlyPrice: 90,
-      yearlyPrice: 972,
+      yearlyPrice: 81,
       originalMonthlyPrice: null,
       features: [
         "500 included minutes, then $18.00 / extra minute",
@@ -58,7 +58,7 @@ const Pricing = () => {
       icon: Crown,
       description: "Ideal for agencies scaling customer engagement with automation.",
       monthlyPrice: 220,
-      yearlyPrice: 2376,
+      yearlyPrice: 198,
       originalMonthlyPrice: null,
       features: [
         "1500 included minutes, then $0.14 / extra minute",
@@ -279,7 +279,7 @@ const Pricing = () => {
                         )}
                       </div>
                       <div className="text-sm text-muted-foreground mt-1">
-                        {billingPeriod === "monthly" ? "per month" : "per year"}
+                        per month {billingPeriod === "yearly" && "(billed yearly)"}
                       </div>
                     </>
                   ) : (
