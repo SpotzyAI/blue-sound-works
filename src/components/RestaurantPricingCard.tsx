@@ -144,9 +144,12 @@ const RestaurantPricingCard = () => {
                     variant={plan.popular ? "secondary" : "hero"}
                     className={`w-full mb-6 group ${plan.popular ? "bg-white text-primary hover:bg-white/90" : ""}`}
                     size="lg"
+                    asChild
                   >
-                    Contact Us for Demo
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <a href="/contact">
+                      Contact Us for Demo
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
 
                   <div className="space-y-3">

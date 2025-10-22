@@ -8,6 +8,7 @@ import Languages from "./pages/Languages";
 import Integrations from "./pages/Integrations";
 import IntegrationDetail from "./pages/IntegrationDetail";
 import Pricing from "./pages/Pricing";
+import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/integration/:integrationName" element={<IntegrationDetail />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/ecommerce" element={<Ecommerce />} />
           <Route path="/industries/call-center" element={<CallCenter />} />

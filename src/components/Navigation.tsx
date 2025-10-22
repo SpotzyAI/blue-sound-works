@@ -100,6 +100,7 @@ const Navigation = () => {
       icon: Mail,
       title: "Contact",
       description: "Get in touch with our team",
+      href: "/contact",
     },
     {
       icon: Clock,

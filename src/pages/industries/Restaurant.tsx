@@ -138,9 +138,11 @@ const Restaurant = () => {
               </div>
             </div>
 
-            <Button variant="hero" size="lg" className="group">
-              Contact Us for Demo
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="hero" size="lg" className="group" asChild>
+              <a href="/contact">
+                Contact Us for Demo
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
         </div>
@@ -338,9 +340,11 @@ const Restaurant = () => {
             <p className="text-xl text-primary-foreground/80 mb-8">
               Schedule a demo and see the real-time availability system in action
             </p>
-            <Button variant="secondary" size="lg" className="group">
-              Contact Us for Demo
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="secondary" size="lg" className="group" asChild>
+              <a href="/contact">
+                Contact Us for Demo
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </div>
         </div>
