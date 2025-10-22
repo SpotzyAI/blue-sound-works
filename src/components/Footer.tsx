@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Instagram, Facebook, Mail } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
 const Footer = () => {
   return <footer className="bg-gradient-subtle border-t border-border py-16">
@@ -11,16 +11,13 @@ const Footer = () => {
             </a>
             <p className="text-muted-foreground">Your 24/7 Voice of Excellence</p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
-                <Twitter className="h-5 w-5" />
+              <a href="https://www.instagram.com/spotzyai/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+                <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
-                <Github className="h-5 w-5" />
+              <a href="https://www.facebook.com/spotzyai/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+                <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+              <a href="mailto:info@spotzyai.com" className="w-10 h-10 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
