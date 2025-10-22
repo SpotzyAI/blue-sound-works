@@ -59,9 +59,9 @@ const Navigation = () => {
     },
     {
       icon: Utensils,
-      title: "Restaurant",
-      description: "Automated phone ordering and reservations",
-      href: "/industries/restaurant",
+      title: "Hospitality",
+      description: "AI voice automation for hotels, restaurants & resorts",
+      href: "/industries/hospitality",
     },
     {
       icon: Scale,
