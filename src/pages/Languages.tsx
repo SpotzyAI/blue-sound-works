@@ -184,27 +184,27 @@ const Languages = () => {
           </div>
 
           {/* Grid */}
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {filteredLanguages.map((language, index) => (
               <div
                 key={language.code}
-                className="group bg-card border border-border rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 animate-fade-in"
+                className="group bg-card border border-border rounded-lg p-4 hover:border-primary transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 animate-fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className="relative mb-4">
-                  <div className="w-20 h-20 rounded-xl flex items-center justify-center text-6xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="relative mb-3">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center text-4xl group-hover:scale-110 transition-transform duration-300">
                     {language.flag}
                   </div>
                   {language.popular && (
-                    <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full font-semibold">
+                    <div className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] px-1.5 py-0.5 rounded-full font-semibold">
                       Popular
                     </div>
                   )}
                 </div>
                 
-                <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">{language.name}</h3>
-                <p className="text-xs text-muted-foreground flex items-center gap-1">
-                  <Globe2 className="h-3 w-3" />
+                <h3 className="text-sm font-bold mb-0.5 group-hover:text-primary transition-colors leading-tight">{language.name}</h3>
+                <p className="text-[11px] text-muted-foreground flex items-center gap-1">
+                  <Globe2 className="h-2.5 w-2.5" />
                   {language.region}
                 </p>
               </div>
