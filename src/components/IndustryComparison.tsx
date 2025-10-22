@@ -54,7 +54,7 @@ const IndustryComparison = () => {
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">90% Cost Reduction</p>
+                    <p className="font-semibold">Cost Reduction</p>
                     <p className="text-sm text-muted-foreground">Pay only per call</p>
                   </div>
                 </div>
