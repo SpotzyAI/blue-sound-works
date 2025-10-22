@@ -33,7 +33,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury" style={{
           animationDelay: '0.3s'
         }}>
-            <span className="text-lg font-semibold text-white"> Create Your Account & First AI Assistant FREE</span>
+            <span className="text-lg font-semibold text-white">Create Your First Assistant For FREE</span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{
