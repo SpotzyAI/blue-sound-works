@@ -124,10 +124,7 @@ const RestaurantPricingCard = () => {
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground mb-2">{plan.description}</p>
-                  <p className="text-sm text-primary font-semibold mb-6">
-                    Best for: {plan.recommended}
-                  </p>
+                  <p className="text-muted-foreground mb-6">{plan.description}</p>
 
                   <div className="mb-6">
                     <div className="flex items-end gap-2 mb-2">
