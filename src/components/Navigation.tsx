@@ -24,6 +24,12 @@ const Navigation = () => {
       description: "See how businesses leverage our platform",
       href: "/#use-cases",
     },
+    {
+      icon: FileText,
+      title: "Integrations",
+      description: "Connect with your favorite tools",
+      href: "/integrations",
+    },
   ];
 
   const industryItems = [
@@ -89,12 +95,6 @@ const Navigation = () => {
       title: "Languages",
       description: "Explore 36 languages and voices",
       href: "/languages",
-    },
-    {
-      icon: FileText,
-      title: "Integrations",
-      description: "Connect with your favorite tools",
-      href: "/integrations",
     },
     {
       icon: Mail,
