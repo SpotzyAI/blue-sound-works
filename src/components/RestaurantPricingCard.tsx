@@ -105,44 +105,44 @@ const RestaurantPricingCard = () => {
                   key={plan.name}
                   className={`p-8 relative transition-all duration-300 ${
                     plan.popular
-                      ? "border-primary border-2 shadow-glow scale-105"
+                      ? "border-[hsl(210,100%,50%)] bg-[hsl(210,100%,50%)] text-white border-2 shadow-glow scale-105"
                       : "hover:shadow-lg"
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-soft">
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-[hsl(210,100%,50%)] px-6 py-2 rounded-full text-sm font-bold shadow-soft">
                       MOST POPULAR
                     </div>
                   )}
 
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 rounded-xl bg-primary/10">
-                      <plan.icon className="h-7 w-7 text-primary" />
+                    <div className={`p-3 rounded-xl ${plan.popular ? "bg-white/20" : "bg-primary/10"}`}>
+                      <plan.icon className={`h-7 w-7 ${plan.popular ? "text-white" : "text-primary"}`} />
                     </div>
                     <div>
-                      <h4 className="text-2xl font-bold">{plan.name}</h4>
+                      <h4 className={`text-2xl font-bold ${plan.popular ? "text-white" : ""}`}>{plan.name}</h4>
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground mb-6">{plan.description}</p>
+                  <p className={`mb-6 ${plan.popular ? "text-white/90" : "text-muted-foreground"}`}>{plan.description}</p>
 
                   <div className="mb-6">
                     <div className="flex items-end gap-2 mb-2">
-                      <span className="text-5xl font-bold text-primary">
+                      <span className={`text-5xl font-bold ${plan.popular ? "text-white" : "text-primary"}`}>
                         €{plan.monthlyPrice}
                       </span>
                     </div>
-                    <div className="text-sm text-muted-foreground">{plan.priceNote}</div>
+                    <div className={`text-sm ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>{plan.priceNote}</div>
                   </div>
 
-                  <div className="mb-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
-                    <p className="text-xs text-muted-foreground mb-1">Additional Usage</p>
-                    <p className="text-sm font-semibold text-primary">{plan.additionalCost}</p>
+                  <div className={`mb-6 p-4 rounded-xl border ${plan.popular ? "bg-white/10 border-white/20" : "bg-primary/5 border-primary/20"}`}>
+                    <p className={`text-xs mb-1 ${plan.popular ? "text-white/80" : "text-muted-foreground"}`}>Additional Usage</p>
+                    <p className={`text-sm font-semibold ${plan.popular ? "text-white" : "text-primary"}`}>{plan.additionalCost}</p>
                   </div>
 
                   <Button
-                    variant={plan.popular ? "hero" : "outline"}
-                    className="w-full mb-6 group"
+                    variant={plan.popular ? "secondary" : "hero"}
+                    className={`w-full mb-6 group ${plan.popular ? "bg-white text-[hsl(210,100%,50%)] hover:bg-white/90" : ""}`}
                     size="lg"
                   >
                     Contact Us for Demo
@@ -152,8 +152,8 @@ const RestaurantPricingCard = () => {
                   <div className="space-y-3">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                        <Check className={`h-5 w-5 mt-0.5 flex-shrink-0 ${plan.popular ? "text-white" : "text-primary"}`} />
+                        <span className={`text-sm ${plan.popular ? "text-white" : ""}`}>{feature}</span>
                       </div>
                     ))}
                   </div>
