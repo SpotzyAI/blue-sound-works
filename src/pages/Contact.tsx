@@ -8,13 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
 
@@ -24,7 +17,6 @@ const contactSchema = z.object({
   email: z.string().trim().email({ message: "Invalid email address" }).max(255),
   phone: z.string().trim().min(1, { message: "Phone number is required" }).max(20),
   businessName: z.string().trim().max(200).optional(),
-  packageInterest: z.string().optional(),
   message: z.string().trim().min(1, { message: "Please tell us what interests you" }).max(1000),
 });
 
@@ -35,7 +27,6 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
     reset,
   } = useForm<ContactFormData>({
@@ -143,25 +134,6 @@ const Contact = () => {
                   {...register("businessName")}
                   className="h-12"
                 />
-              </div>
-
-              <div>
-                <Label htmlFor="packageInterest" className="text-base mb-2 block">
-                  Package/Service Interest
-                </Label>
-                <Select onValueChange={(value) => setValue("packageInterest", value)}>
-                  <SelectTrigger className="h-12">
-                    <SelectValue placeholder="Select a package or service (optional)" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="starter">Starter Package</SelectItem>
-                    <SelectItem value="professional">Professional Package</SelectItem>
-                    <SelectItem value="enterprise">Enterprise Package</SelectItem>
-                    <SelectItem value="custom">Custom Solution</SelectItem>
-                    <SelectItem value="demo">Product Demo</SelectItem>
-                    <SelectItem value="consultation">Consultation</SelectItem>
-                  </SelectContent>
-                </Select>
               </div>
 
               <div>
