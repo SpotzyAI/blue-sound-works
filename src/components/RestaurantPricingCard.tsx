@@ -1,76 +1,86 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Check, Star, ArrowRight, Sparkles, Zap, Crown } from "lucide-react";
+import { Check, Star, ArrowRight, Sparkles, Zap, Crown, Settings } from "lucide-react";
 
 const RestaurantPricingCard = () => {
   const setupCosts = [
-    { item: "Project Configuration & Setup", cost: "€2,500" },
-    { item: "AI Voice Assistant Training", cost: "€1,500" },
-    { item: "Reservation Dashboard", cost: "FREE", highlight: true },
-    { item: "System Integration", cost: "€800" },
-    { item: "Testing & Quality Assurance", cost: "€500" }
+    { 
+      plan: "LITE", 
+      cost: "€300", 
+      note: "€100 per additional language",
+      highlight: "Free Training Included"
+    },
+    { 
+      plan: "GROUP", 
+      cost: "€200", 
+      note: "per assistant | €150 per additional language",
+      highlight: "Free Training Included"
+    }
   ];
 
   const plans = [
     {
       name: "LITE",
       icon: Sparkles,
-      monthlyPrice: 290,
+      monthlyPrice: 199,
+      priceNote: "+ VAT / month",
       description: "Perfect for small restaurants",
-      recommended: "20-40 covers",
+      recommended: "1 Assistant",
       popular: false,
+      setupCost: "€300 + VAT (one-time)",
+      additionalCost: "€0.30 / minute",
       features: [
-        "Up to 800 calls/month",
-        "1 AI voice assistant",
-        "60 confirmation messages",
-        "60 reminder messages",
-        "Real-time availability checking",
-        "Free reservation dashboard",
-        "Basic analytics",
-        "Email support"
+        "1 Assistant",
+        "150 free minutes",
+        "10 concurrent calls",
+        "1 SMS Automation",
+        "24/7 Availability",
+        "2 Languages Included",
+        "Real-Time Availability",
+        "Free Booking System",
+        "Free Training & Customisation"
       ]
     },
     {
       name: "GROUP",
       icon: Zap,
-      monthlyPrice: 590,
+      monthlyPrice: 159,
+      priceNote: "+ VAT / month per assistant",
       description: "Ideal for restaurant groups",
-      recommended: "2-5 locations",
+      recommended: "5-10 Assistants",
       popular: true,
+      setupCost: "€200 + VAT per assistant (one-time)",
+      additionalCost: "€0.25 / minute",
       features: [
-        "Up to 2,000 calls/month",
-        "2 AI voice assistants",
-        "120 confirmation messages",
-        "120 reminder messages",
-        "30 follow-up messages",
-        "Real-time availability checking",
-        "Free reservation dashboard",
-        "Advanced analytics",
-        "Priority support",
-        "Multi-location support"
+        "5-10 Assistants",
+        "150 free minutes per assistant",
+        "15 concurrent calls per assistant",
+        "2 SMS Automations",
+        "24/7 Availability",
+        "3 Languages Included",
+        "Real-Time Availability",
+        "Priority Support",
+        "Free Booking System",
+        "Free Training & Customisation"
       ]
     },
     {
       name: "ENTERPRISE",
       icon: Crown,
-      monthlyPrice: 990,
-      description: "Built for large chains",
-      recommended: "5+ locations",
+      monthlyPrice: "Custom",
+      priceNote: "+ VAT",
+      description: "Built for large operations",
+      recommended: "11+ Assistants",
       popular: false,
+      setupCost: "Contact us for custom pricing",
+      additionalCost: "Contact us",
       features: [
-        "Up to 5,000 calls/month",
-        "5 AI voice assistants",
-        "200 confirmation messages",
-        "200 reminder messages",
-        "100 follow-up messages",
-        "50 birthday reminders",
-        "Real-time availability checking",
-        "Free reservation dashboard",
-        "Premium analytics & reporting",
-        "Dedicated account manager",
-        "24/7 priority support",
-        "Custom integrations",
-        "White-label options"
+        "11+ Assistants",
+        "Tailored pricing based on call volume and features",
+        "Volume discounts available",
+        "Advanced analytics & reporting",
+        "SLA & Dedicated Manager",
+        "Contact us for a custom offer"
       ]
     }
   ];
@@ -86,40 +96,30 @@ const RestaurantPricingCard = () => {
             </p>
           </div>
 
-          {/* Setup Costs Table */}
+          {/* Setup Costs */}
           <div className="mb-16">
-            <div className="max-w-3xl mx-auto">
-              <h3 className="text-2xl font-bold mb-6 text-center">One-Time Setup Costs</h3>
-              <Card className="overflow-hidden border-2">
-                <div className="divide-y divide-border">
-                  {setupCosts.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className={`flex justify-between items-center p-4 ${
-                        item.highlight
-                          ? "bg-primary/10 border-l-4 border-l-primary"
-                          : "bg-card"
-                      }`}
-                    >
-                      <span className={item.highlight ? "font-bold" : ""}>{item.item}</span>
-                      <span
-                        className={`text-lg font-bold ${
-                          item.highlight ? "text-primary" : ""
-                        }`}
-                      >
-                        {item.cost}
-                      </span>
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-6 text-center flex items-center justify-center gap-2">
+                <Settings className="h-6 w-6 text-muted-foreground" />
+                Setup Costs
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                {setupCosts.map((item, idx) => (
+                  <Card key={idx} className="p-6 border-2">
+                    <h4 className="text-2xl font-bold mb-4">{item.plan}</h4>
+                    <div className="mb-4">
+                      <p className="text-3xl font-bold text-primary mb-1">
+                        {item.cost} <span className="text-sm text-muted-foreground">+ VAT</span>
+                      </p>
+                      <p className="text-sm text-muted-foreground">(one-time)</p>
                     </div>
-                  ))}
-                  <div className="flex justify-between items-center p-4 bg-muted font-bold text-lg">
-                    <span>Total Setup Investment</span>
-                    <span>€5,300</span>
-                  </div>
-                </div>
-              </Card>
-              <p className="text-center text-sm text-muted-foreground mt-4">
-                Dashboard value (€2,000) included FREE with all monthly plans
-              </p>
+                    <p className="text-sm text-muted-foreground mb-3">{item.note}</p>
+                    <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
+                      <p className="text-sm font-semibold text-primary">{item.highlight}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -162,7 +162,17 @@ const RestaurantPricingCard = () => {
                         €{plan.monthlyPrice}
                       </span>
                     </div>
-                    <div className="text-sm text-muted-foreground">per month</div>
+                    <div className="text-sm text-muted-foreground">{plan.priceNote}</div>
+                  </div>
+
+                  <div className="mb-4 p-4 rounded-xl bg-muted/50 border border-border">
+                    <p className="text-xs text-muted-foreground mb-1">Setup Cost</p>
+                    <p className="text-sm font-semibold">{plan.setupCost}</p>
+                  </div>
+
+                  <div className="mb-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
+                    <p className="text-xs text-muted-foreground mb-1">Additional Usage</p>
+                    <p className="text-sm font-semibold text-primary">{plan.additionalCost}</p>
                   </div>
 
                   <Button
@@ -187,18 +197,30 @@ const RestaurantPricingCard = () => {
             </div>
           </div>
 
-          {/* Additional Note */}
-          <div className="max-w-3xl mx-auto">
+          {/* Additional Notes */}
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             <Card className="p-6 bg-muted/50 border-2 border-primary/20">
               <div className="flex items-start gap-4">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <Star className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold mb-2">Extra SMS Automations</h4>
+                  <h4 className="font-bold mb-2">Free Booking System</h4>
                   <p className="text-sm text-muted-foreground">
-                    Need more messages beyond your package limits? Add extra SMS automations for only{" "}
-                    <span className="font-bold text-foreground">€20/month per 100 messages</span>
+                    All plans include our professional reservation dashboard at no extra cost - manage bookings, track customers, and view analytics.
+                  </p>
+                </div>
+              </div>
+            </Card>
+            <Card className="p-6 bg-muted/50 border-2 border-primary/20">
+              <div className="flex items-start gap-4">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-bold mb-2">Free Training Included</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Complete customization and training for your AI assistant included with setup - no hidden costs.
                   </p>
                 </div>
               </div>
