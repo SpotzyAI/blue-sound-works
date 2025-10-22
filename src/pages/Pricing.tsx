@@ -291,6 +291,11 @@ const Pricing = () => {
                   variant={plan.popular ? "hero" : "outline"}
                   className="w-full mb-6"
                   size="lg"
+                  onClick={() => {
+                    if (plan.monthlyPrice) {
+                      window.location.href = "https://platform.spotzyai.com/plans";
+                    }
+                  }}
                 >
                   {plan.monthlyPrice ? "Subscribe now" : "Contact sales"}
                 </Button>
