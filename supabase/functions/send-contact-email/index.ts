@@ -32,7 +32,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to sales team
     const salesEmail = await resend.emails.send({
-      from: "SPOTZY Contact Form <onboarding@resend.dev>",
+      from: "SPOTZY Contact Form <no-reply@spotzyai.com>",
       to: ["sales@spotzyai.com"],
       subject: `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`,
       html: `
@@ -51,7 +51,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to customer
     const confirmationEmail = await resend.emails.send({
-      from: "SPOTZY <onboarding@resend.dev>",
+      from: "SPOTZY <no-reply@spotzyai.com>",
       to: [formData.email],
       subject: "Thank you for contacting SPOTZY",
       html: `
