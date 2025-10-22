@@ -135,11 +135,6 @@ const RestaurantPricingCard = () => {
                     <div className="text-sm text-muted-foreground">{plan.priceNote}</div>
                   </div>
 
-                  <div className="mb-4 p-4 rounded-xl bg-muted/50 border border-border">
-                    <p className="text-xs text-muted-foreground mb-1">Setup Cost</p>
-                    <p className="text-sm font-semibold">{plan.setupCost}</p>
-                  </div>
-
                   <div className="mb-6 p-4 rounded-xl bg-primary/5 border border-primary/20">
                     <p className="text-xs text-muted-foreground mb-1">Additional Usage</p>
                     <p className="text-sm font-semibold text-primary">{plan.additionalCost}</p>
