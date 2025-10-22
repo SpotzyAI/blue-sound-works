@@ -124,12 +124,12 @@ const Pricing = () => {
               <Card
                 key={plan.name}
                 className={`p-8 relative hover:shadow-luxury transition-all duration-500 hover:-translate-y-2 ${
-                  plan.popular ? "border-primary border-2 scale-105 shadow-glow animate-glow-pulse" : "hover:border-primary/50"
+                  plan.popular ? "border-primary border-2 scale-105 shadow-glow" : "hover:border-primary/50"
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-hero text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-glow animate-glow-pulse">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-hero text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-glow">
                     Most Popular
                   </div>
                 )}

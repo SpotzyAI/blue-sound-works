@@ -62,7 +62,6 @@ const Footer = () => {
           <div className="flex gap-6 text-sm">
             <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">Terms</a>
             <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">Privacy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-all duration-300 hover:-translate-y-0.5">Cookies</a>
           </div>
         </div>
       </div>
