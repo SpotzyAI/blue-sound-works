@@ -69,7 +69,7 @@ const Footer = () => {
             © 2025 SpotzyAI. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
+            <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
             <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Cookies</a>
           </div>
