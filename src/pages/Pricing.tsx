@@ -24,7 +24,7 @@ const Pricing = () => {
       icon: Sparkles,
       description: "Start automating calls with voice AI agents.",
       monthlyPrice: 19.99,
-      yearlyPrice: 199.9,
+      yearlyPrice: 215.89,
       originalMonthlyPrice: null,
       features: [
         "75 included minutes, then $0.20 / extra minute",
@@ -41,7 +41,7 @@ const Pricing = () => {
       icon: Zap,
       description: "For small businesses automating inbound and outbound calls.",
       monthlyPrice: 90,
-      yearlyPrice: 900,
+      yearlyPrice: 972,
       originalMonthlyPrice: null,
       features: [
         "500 included minutes, then $18.00 / extra minute",
@@ -58,7 +58,7 @@ const Pricing = () => {
       icon: Crown,
       description: "Ideal for agencies scaling customer engagement with automation.",
       monthlyPrice: 220,
-      yearlyPrice: 2200,
+      yearlyPrice: 2376,
       originalMonthlyPrice: null,
       features: [
         "1500 included minutes, then $0.14 / extra minute",
@@ -235,7 +235,7 @@ const Pricing = () => {
                 }`}
               >
                 Yearly
-                <span className="ml-2 text-xs">2 months free</span>
+                <span className="ml-2 text-xs">Save 10%</span>
               </button>
             </div>
           </div>
