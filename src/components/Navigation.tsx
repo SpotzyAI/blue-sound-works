@@ -235,8 +235,8 @@ const Navigation = () => {
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-                <nav className="flex flex-col gap-6 mt-8">
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] overflow-y-auto">
+                <nav className="flex flex-col gap-6 mt-8 pb-8">
                   <div>
                     <h3 className="font-semibold text-lg mb-3">Solution</h3>
                     <div className="flex flex-col gap-2">
