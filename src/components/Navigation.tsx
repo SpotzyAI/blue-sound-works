@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat } from "lucide-react";
+import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat, X } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
 import {
   NavigationMenu,
@@ -9,8 +10,14 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const solutionItems = [
     {
       icon: Sparkles,
@@ -222,9 +229,104 @@ const Navigation = () => {
             >
               Get Started
             </Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <div>
+                    <h3 className="font-semibold text-lg mb-3">Solution</h3>
+                    <div className="flex flex-col gap-2">
+                      {solutionItems.map((item) => (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
+                        >
+                          <item.icon className="h-5 w-5 text-primary" />
+                          <div>
+                            <div className="font-medium">{item.title}</div>
+                            <div className="text-sm text-muted-foreground">{item.description}</div>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-lg mb-3">Industries</h3>
+                    <div className="flex flex-col gap-2">
+                      {industryItems.map((item) => (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
+                        >
+                          <item.icon className="h-5 w-5 text-primary" />
+                          <span className="font-medium">{item.title}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <a
+                      href="/pricing"
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all font-medium"
+                    >
+                      <DollarSign className="h-5 w-5 text-primary" />
+                      Pricing
+                    </a>
+                  </div>
+
+                  <div>
+                    <h3 className="font-semibold text-lg mb-3">Resources</h3>
+                    <div className="flex flex-col gap-2">
+                      {resourceItems.map((item) => (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
+                        >
+                          <item.icon className="h-5 w-5 text-primary" />
+                          <span className="font-medium">{item.title}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-3 pt-4 border-t">
+                    <Button 
+                      variant="ghost" 
+                      className="w-full"
+                      onClick={() => {
+                        window.location.href = "https://platform.spotzyai.com";
+                        setIsOpen(false);
+                      }}
+                    >
+                      Sign In
+                    </Button>
+                    <Button 
+                      variant="hero" 
+                      className="w-full"
+                      onClick={() => {
+                        window.location.href = "https://platform.spotzyai.com";
+                        setIsOpen(false);
+                      }}
+                    >
+                      Get Started
+                    </Button>
+                  </div>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
