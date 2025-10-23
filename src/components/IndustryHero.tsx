@@ -37,9 +37,11 @@ const IndustryHero = ({ badge, title, subtitle, benefits, image }: IndustryHeroP
             ))}
           </div>
 
-          <Button variant="hero" size="lg" className="group">
-            Get Started
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="lg" className="group" asChild>
+            <a href="https://platform.spotzyai.com">
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>

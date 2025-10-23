@@ -133,7 +133,7 @@ const Restaurant = () => {
             </div>
 
             <Button variant="hero" size="lg" className="group" asChild>
-              <a href="/contact">
+              <a href="https://platform.spotzyai.com">
                 Contact Us for Demo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -294,7 +294,7 @@ const Restaurant = () => {
               Schedule a demo and see the real-time availability system in action
             </p>
             <Button variant="secondary" size="lg" className="group" asChild>
-              <a href="/contact">
+              <a href="https://platform.spotzyai.com">
                 Contact Us for Demo
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
