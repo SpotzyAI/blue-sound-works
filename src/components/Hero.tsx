@@ -15,9 +15,7 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 animate-fade-in hover:bg-primary/20 transition-all duration-300">
-            <span className="text-sm text-primary font-medium">🚀 Next Generation Voice AI</span>
-          </div>
+          
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
             Build Intelligent <span className="text-primary bg-clip-text">Voice Assistants</span> in Minutes
@@ -30,14 +28,12 @@ const Hero = () => {
             No code required. Deploy at scale.
           </p>
 
-          <a 
-            href="https://platform.spotzyai.com" 
-            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury hover:scale-105 transition-transform duration-300 cursor-pointer" 
-            style={{
-              animationDelay: '0.3s'
-            }}
-          >
-            <span className="text-lg font-semibold" style={{ color: '#1434A4' }}>Create Your First Assistant For FREE</span>
+          <a href="https://platform.spotzyai.com" className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-primary rounded-full border border-primary/30 mb-10 animate-scale-in shadow-luxury hover:scale-105 transition-transform duration-300 cursor-pointer" style={{
+          animationDelay: '0.3s'
+        }}>
+            <span className="text-lg font-semibold" style={{
+            color: '#1434A4'
+          }}>Create Your First Assistant For FREE</span>
           </a>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{
