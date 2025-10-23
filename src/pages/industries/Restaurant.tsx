@@ -202,7 +202,7 @@ const Restaurant = () => {
               </p>
             </div>
 
-            <div className="max-w-3xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="p-8 rounded-2xl bg-gradient-hero text-primary-foreground">
                 <h3 className="text-2xl font-bold mb-6">What's Included</h3>
                 <ul className="space-y-4">
@@ -218,6 +218,29 @@ const Restaurant = () => {
                     <li key={idx} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="p-8 rounded-2xl bg-card border border-border shadow-soft">
+                <h3 className="text-2xl font-bold mb-6">Free Reservation Dashboard</h3>
+                <div className="mb-6 p-6 rounded-xl bg-primary/5 border border-primary/20">
+                  <p className="text-3xl font-bold text-primary mb-2">€2,000 Value</p>
+                  <p className="text-muted-foreground">Included FREE with all plans</p>
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    "Real-time reservation view",
+                    "Table management",
+                    "Customer database",
+                    "Analytics & insights",
+                    "Mobile-friendly design",
+                    "Easy-to-use interface"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Star className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
