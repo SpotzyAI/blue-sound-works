@@ -194,7 +194,7 @@ const Restaurant = () => {
               <div className="p-8 rounded-2xl bg-gradient-hero text-primary-foreground">
                 <h3 className="text-2xl font-bold mb-6">What's Included</h3>
                 <ul className="space-y-4">
-                  {["Complete project setup and configuration", "Custom AI voice assistant trained for your restaurant", "Beautiful reservation dashboard (FREE - valued at €2,000)", "Ongoing system maintenance", "Regular updates and improvements", "Technical support", "Monthly B2B contract with full project ownership"].map((item, idx) => <li key={idx} className="flex items-start gap-3">
+                  {["Complete project setup and configuration", "Custom AI voice assistant trained for your restaurant", "User Friendly reservation dashboard", "Ongoing system maintenance", "Regular updates and improvements", "Technical support", "Monthly B2B contract with full project ownership"].map((item, idx) => <li key={idx} className="flex items-start gap-3">
                       <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>)}
