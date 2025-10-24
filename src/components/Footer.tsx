@@ -19,7 +19,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300 hover:scale-105 w-fit">
-              <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
+              <div className="bg-white rounded-2xl p-2 shadow-sm">
+                <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-8" />
+              </div>
             </a>
             <p className="text-muted-foreground">Your 24/7 Voice of Excellence</p>
             <div className="flex gap-4">
