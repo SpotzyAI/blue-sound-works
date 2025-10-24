@@ -118,7 +118,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300 hover:scale-105">
@@ -130,20 +130,20 @@ const Navigation = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solution</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[400px] p-6">
-                    <h3 className="text-sm font-semibold text-primary mb-4">Explore Our Platform</h3>
+                  <div className="w-[400px] p-6 glass-card">
+                    <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Explore Our Platform</h3>
                     <div className="grid gap-3">
                       {solutionItems.map((item) => (
                         <a
                           key={item.title}
                           href={item.href}
-                          className="group flex items-start gap-4 rounded-lg p-3 hover:bg-muted/50 transition-all duration-300 hover:shadow-soft hover:translate-x-1"
+                          className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
                         >
-                          <div className="mt-1 p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:shadow-glow group-hover:scale-110">
+                          <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
                           <div className="flex-1">
-                            <div className="font-semibold text-foreground mb-1">{item.title}</div>
+                            <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
                         </a>
@@ -156,20 +156,20 @@ const Navigation = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[700px] p-6">
-                    <h3 className="text-sm font-semibold text-primary mb-4">Industries we serve</h3>
+                  <div className="w-[700px] p-6 glass-card">
+                    <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Industries we serve</h3>
                     <div className="grid grid-cols-3 gap-3">
                       {industryItems.map((item) => (
                         <a
                           key={item.title}
                           href={item.href}
-                          className="group flex flex-col items-start gap-2 rounded-lg p-3 hover:bg-muted/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
+                          className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
                         >
-                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:shadow-glow group-hover:scale-110">
+                          <div className="p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
                           <div>
-                            <div className="font-semibold text-foreground mb-1">{item.title}</div>
+                            <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
                         </a>
@@ -188,20 +188,20 @@ const Navigation = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <div className="w-[500px] p-6">
-                    <h3 className="text-sm font-semibold text-primary mb-4">Resources & Support</h3>
+                  <div className="w-[500px] p-6 glass-card">
+                    <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Resources & Support</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {resourceItems.map((item) => (
                         <a
                           key={item.title}
                           href={item.href}
-                          className="group flex flex-col items-start gap-2 rounded-lg p-3 hover:bg-muted/50 transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
+                          className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
                         >
-                          <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:shadow-glow group-hover:scale-110">
+                          <div className="p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
                           <div>
-                            <div className="font-semibold text-foreground mb-1">{item.title}</div>
+                            <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
                         </a>
@@ -224,7 +224,7 @@ const Navigation = () => {
             <Button 
               variant="hero" 
               size="default" 
-              className="transition-all duration-300 hover:scale-105 hover:shadow-glow"
+              className="hover-lift animate-glow"
               onClick={() => window.location.href = "https://platform.spotzyai.com"}
             >
               Get Started

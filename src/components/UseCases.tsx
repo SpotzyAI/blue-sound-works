@@ -44,18 +44,20 @@ const UseCases = () => {
           {useCases.map((useCase, index) => (
             <div
               key={index}
-              className="group relative p-8 bg-card rounded-2xl border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden"
+              className="group relative p-8 glass-card rounded-2xl hover-lift animate-scale-in overflow-hidden"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              {/* Gradient glow effect on hover */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-accent opacity-0 blur-3xl group-hover:opacity-20 rounded-full -mr-20 -mt-20 transition-all duration-500" />
               
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center mb-6">
-                  <useCase.icon className="h-8 w-8 text-primary-foreground" />
+                <div className="w-16 h-16 glass-strong rounded-xl flex items-center justify-center mb-6 group-hover:animate-glow">
+                  <useCase.icon className="h-8 w-8 text-primary transition-transform duration-300 group-hover:scale-110" />
                 </div>
                 
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-bold">{useCase.title}</h3>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full">
+                  <h3 className="text-2xl font-bold group-hover:bg-gradient-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{useCase.title}</h3>
+                  <span className="px-3 py-1 glass text-primary text-sm font-semibold rounded-full">
                     {useCase.stats}
                   </span>
                 </div>

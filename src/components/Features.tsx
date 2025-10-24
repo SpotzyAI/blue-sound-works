@@ -50,14 +50,19 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 bg-card rounded-xl border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-luxury hover:-translate-y-2 animate-scale-in"
+              className="group p-8 glass-card rounded-2xl hover-lift animate-scale-in relative overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
-                <feature.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-glass opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              
+              <div className="relative z-10">
+                <div className="w-14 h-14 glass-strong rounded-xl flex items-center justify-center mb-6 group-hover:animate-glow transition-all duration-300">
+                  <feature.icon className="h-7 w-7 text-primary transition-transform duration-300 group-hover:scale-110" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
