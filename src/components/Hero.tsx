@@ -53,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
           >
-            Build Intelligent <span className="bg-gradient-accent bg-clip-text text-transparent">Voice Assistants</span> in Minutes
+            Build Intelligent <span className="bg-gradient-accent bg-clip-text text-transparent">Voice</span> Assistants in Minutes
           </motion.h1>
           
           <motion.p 
