@@ -142,7 +142,7 @@ const Navigation = () => {
               <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
             </a>
 
-          <NavigationMenu className="hidden md:block">
+            <NavigationMenu className="hidden md:block">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Solution</NavigationMenuTrigger>
@@ -346,9 +346,10 @@ const Navigation = () => {
             </Sheet>
           </div>
         </div>
-      </motion.nav>
-    </>
-  );
+      </div>
+    </motion.nav>
+  </>
+);
 };
 
 export default Navigation;
