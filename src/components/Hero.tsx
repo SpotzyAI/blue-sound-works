@@ -81,7 +81,7 @@ const Hero = () => {
             className="inline-flex items-center gap-3 px-8 py-4 glass-card rounded-full mb-10 cursor-pointer group"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+            transition={{ duration: 0.3, delay: 0.1, ease: "easeOut" }}
             whileHover={{ 
               y: -4, 
               boxShadow: "0 20px 60px -10px hsl(220 88% 35% / 0.25), 0 0 40px hsl(220 88% 45% / 0.3)"
@@ -95,7 +95,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
+            transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
           >
             <motion.div whileHover={{ y: -4, boxShadow: "0 20px 60px -10px hsl(220 88% 35% / 0.25)" }}>
               <Button variant="hero" size="lg" className="group" asChild>
