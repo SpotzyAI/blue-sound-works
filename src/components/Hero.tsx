@@ -2,69 +2,118 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Mic } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import AIWaveform from "@/components/AIWaveform";
+import { motion } from "framer-motion";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0" style={{
-      backgroundImage: `url(${heroBackground})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    }}>
+      {/* Background Image with Overlay - Animated */}
+      <motion.div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+        animate={{
+          backgroundPosition: ['center', '60% center', 'center'],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background" />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* AI Microphone Icon with Glass Effect */}
-          <div className="mb-8 inline-flex items-center justify-center animate-float">
-            <div className="relative">
+          <motion.div 
+            className="mb-8 inline-flex items-center justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <motion.div 
+              className="relative"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
               <div className="absolute inset-0 bg-gradient-accent blur-2xl opacity-30 rounded-full" />
               <div className="relative glass-strong p-6 rounded-full">
                 <Mic className="h-12 w-12 text-primary" />
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+          >
             Build Intelligent <span className="bg-gradient-accent bg-clip-text text-transparent">Voice Assistants</span> in Minutes
-          </h1>
+          </motion.h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in" style={{
-          animationDelay: '0.2s'
-        }}>
+          <motion.p 
+            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
+          >
             Create production-ready AI voice agents with enterprise-grade capabilities. 
             No code required. Deploy at scale.
-          </p>
+          </motion.p>
 
           {/* AI Waveform Animation */}
-          <div className="mb-8 animate-scale-in" style={{ animationDelay: '0.25s' }}>
+          <motion.div 
+            className="mb-8"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.35, ease: "easeOut" }}
+          >
             <AIWaveform />
-          </div>
+          </motion.div>
 
-          <a href="https://platform.spotzyai.com" className="inline-flex items-center gap-3 px-8 py-4 glass-card rounded-full mb-10 animate-scale-in hover-lift animate-glow cursor-pointer group" style={{
-          animationDelay: '0.3s'
-        }}>
+          <motion.a 
+            href="https://platform.spotzyai.com" 
+            className="inline-flex items-center gap-3 px-8 py-4 glass-card rounded-full mb-10 cursor-pointer group"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.45, ease: "easeOut" }}
+            whileHover={{ 
+              y: -4, 
+              boxShadow: "0 20px 60px -10px hsl(220 88% 35% / 0.25), 0 0 40px hsl(220 88% 45% / 0.3)"
+            }}
+          >
             <span className="text-lg font-semibold bg-gradient-accent bg-clip-text text-transparent">Create Your First Assistant For FREE</span>
             <ArrowRight className="h-5 w-5 text-primary group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          </motion.a>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-scale-in" style={{
-          animationDelay: '0.4s'
-        }}>
-            <Button variant="hero" size="lg" className="group hover-lift animate-glow" asChild>
-              <a href="https://platform.spotzyai.com">
-                Start Building Free
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-            </Button>
-            <Button variant="glass" size="lg" className="group hover-lift" asChild>
-              <a href="/contact">
-                <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                Contact Us
-              </a>
-            </Button>
-          </div>
+          <motion.div 
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
+          >
+            <motion.div whileHover={{ y: -4, boxShadow: "0 20px 60px -10px hsl(220 88% 35% / 0.25)" }}>
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href="https://platform.spotzyai.com">
+                  Start Building Free
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ y: -4 }}>
+              <Button variant="glass" size="lg" className="group" asChild>
+                <a href="/contact">
+                  <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+                  Contact Us
+                </a>
+              </Button>
+            </motion.div>
+          </motion.div>
 
           {/* Trust Indicators */}
           

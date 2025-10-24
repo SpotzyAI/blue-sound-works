@@ -1,7 +1,16 @@
 import { Instagram, Facebook, Mail } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
+import { motion } from "framer-motion";
+
 const Footer = () => {
-  return <footer className="relative bg-gradient-subtle border-t border-border/50 py-16 overflow-hidden">
+  return (
+    <motion.footer 
+      className="relative bg-gradient-subtle border-t border-border/50 py-16 overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+    >
       {/* Glass effect background */}
       <div className="absolute inset-0 bg-gradient-glass opacity-30" />
       
@@ -14,15 +23,34 @@ const Footer = () => {
             </a>
             <p className="text-muted-foreground">Your 24/7 Voice of Excellence</p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/spotzyai/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+              <motion.a 
+                href="https://www.instagram.com/spotzyai/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300"
+                whileHover={{ scale: 1.1, y: -2, boxShadow: "0 0 20px hsl(220 88% 45% / 0.3)" }}
+                transition={{ duration: 0.2 }}
+              >
                 <Instagram className="h-5 w-5" />
-              </a>
-              <a href="https://www.facebook.com/spotzyai/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+              </motion.a>
+              <motion.a 
+                href="https://www.facebook.com/spotzyai/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300"
+                whileHover={{ scale: 1.1, y: -2, boxShadow: "0 0 20px hsl(220 88% 45% / 0.3)" }}
+                transition={{ duration: 0.2 }}
+              >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a href="mailto:info@spotzyai.com" className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300 hover:shadow-glow hover:scale-110">
+              </motion.a>
+              <motion.a 
+                href="mailto:info@spotzyai.com" 
+                className="w-10 h-10 rounded-lg glass hover:glass-strong hover:text-primary flex items-center justify-center transition-all duration-300"
+                whileHover={{ scale: 1.1, y: -2, boxShadow: "0 0 20px hsl(220 88% 45% / 0.3)" }}
+                transition={{ duration: 0.2 }}
+              >
                 <Mail className="h-5 w-5" />
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -68,6 +96,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </motion.footer>
+  );
 };
 export default Footer;

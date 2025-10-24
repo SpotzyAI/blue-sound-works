@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat, X } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,6 +19,12 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.05],
+    ["rgba(255, 255, 255, 0.05)", "rgba(255, 255, 255, 0.1)"]
+  );
   const solutionItems = [
     {
       icon: Sparkles,
@@ -118,12 +125,22 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card transition-all duration-300">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300 hover:scale-105">
-            <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
-          </a>
+    <>
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-accent z-[60]"
+        style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
+      />
+      
+      <motion.nav 
+        className="fixed top-1 left-0 right-0 z-50 glass-card transition-all duration-300"
+        style={{ backgroundColor }}
+      >
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300 hover:scale-105">
+              <img src={spotzyLogo} alt="SpotzyAI Logo" className="h-10" />
+            </a>
 
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList>
@@ -329,9 +346,10 @@ const Navigation = () => {
             </Sheet>
           </div>
         </div>
-      </div>
-    </nav>
+      </motion.nav>
+    </>
   );
 };
 
 export default Navigation;
+
