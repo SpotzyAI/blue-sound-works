@@ -7,35 +7,40 @@
     <meta name="description" content="Create production-ready AI voice agents with enterprise-grade capabilities. No code required. Deploy at scale with SpotzyAI.">
     <meta name="author" content="SpotzyAI" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674382215"></script>
+    <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17674382215');
-    </script>
-
-    <!-- Event snippet for Υποβολή φόρμας δυνητικού πελάτη conversion page -->
-    <script>
-      gtag('event', 'conversion', {
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17674382215';
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17674382215');
+        
+        // Event snippet for conversion
+        gtag('event', 'conversion', {
           'send_to': 'AW-17674382215/vIXDCKuxorIbEIfX5utB',
           'value': 1.0,
           'currency': 'USD'
+        });
       });
     </script>
 
-    <!-- Hotjar Tracking Code for https://spotzyai.com -->
+    <!-- Hotjar Tracking Code - Deferred for performance -->
     <script>
+      window.addEventListener('load', function() {
         (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6480320,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6480320,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      });
     </script>
 
     
