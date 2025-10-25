@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Mic } from "lucide-react";
+// Force re-import of updated background image
 import heroBackground from "@/assets/hero-background.jpg";
 import AIWaveform from "@/components/AIWaveform";
 import { motion } from "framer-motion";
