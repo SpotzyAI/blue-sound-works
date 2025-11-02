@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutSpotzy = () => {
   const stats = [
-    { icon: Globe, value: "10+", label: "Languages Supported" },
+    { icon: Globe, value: "36", label: "Languages Supported" },
     { icon: Zap, value: "1000+", label: "Concurrent Calls" },
     { icon: Shield, value: "100%", label: "Enterprise Security" },
     { icon: Award, value: "24/7", label: "Support Available" },
