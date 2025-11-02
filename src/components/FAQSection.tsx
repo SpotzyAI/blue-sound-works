@@ -12,11 +12,11 @@ const FAQSection = () => {
     },
     {
       question: "How is SpotzyAI different from other AI voice assistants?",
-      answer: "SpotzyAI stands out with unique features like real-time availability checking (especially for restaurants), no-code deployment, support for 36 languages with native accents, and the ability to handle 1000+ concurrent calls. We also provide full project setup and maintenance for restaurant clients through our B2B partnership model, including a free reservation dashboard."
+      answer: "SpotzyAI stands out with unique features like real-time availability checking (especially for restaurants), no-code deployment, support for 10+ languages with native accents, and the ability to handle 1000+ concurrent calls. We also provide full project setup and maintenance for restaurant clients through our B2B partnership model, including a free reservation dashboard."
     },
     {
       question: "What languages does SpotzyAI support?",
-      answer: "SpotzyAI supports 36 languages with native accent recognition and cultural adaptation. This includes major languages like English, Spanish, French, German, Chinese, Japanese, Arabic, and many more. Our AI can seamlessly handle multilingual conversations and switch between languages as needed."
+      answer: "SpotzyAI supports 10+ languages with native accent recognition and cultural adaptation. This includes major languages like English, Spanish, French, German, Chinese, Japanese, and more. Our AI can seamlessly handle multilingual conversations and switch between languages as needed."
     },
     {
       question: "Can SpotzyAI integrate with my existing systems?",
@@ -24,7 +24,7 @@ const FAQSection = () => {
     },
     {
       question: "How much does SpotzyAI cost?",
-      answer: "SpotzyAI offers flexible pricing starting at $19.99/month for the Starter plan (100 included minutes), $99.99/month for the Pro plan (500 included minutes), and $599.99/month for the Ultimate plan (3000 included minutes + 1000 concurrent calls). All plans include core features, with advanced capabilities available on higher tiers. We also offer custom B2B contracts for restaurants."
+      answer: "SpotzyAI offers flexible pricing starting at $19.99/month for the Starter plan (75 included minutes, $0.20/extra), $90/month for the Pro plan (500 included minutes, $18/extra), and $220/month for the Ultimate plan (1500 included minutes, $0.14/extra, 1000 concurrent calls). All plans include core features, with advanced capabilities available on higher tiers. We also offer custom B2B contracts for restaurants."
     },
     {
       question: "What industries can benefit from SpotzyAI?",

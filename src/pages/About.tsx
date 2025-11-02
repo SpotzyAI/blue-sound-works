@@ -7,7 +7,7 @@ import { OrganizationSchema } from "@/components/StructuredData";
 
 const About = () => {
   const stats = [
-    { icon: Globe, value: "36", label: "Languages Supported" },
+    { icon: Globe, value: "10+", label: "Languages Supported" },
     { icon: Zap, value: "1000+", label: "Concurrent Calls" },
     { icon: Shield, value: "100%", label: "Enterprise Security" },
     { icon: Award, value: "24/7", label: "Support Available" },
@@ -173,9 +173,9 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                    <h3 className="text-xl font-bold mb-3">36 Languages, Native Accents</h3>
+                    <h3 className="text-xl font-bold mb-3">10+ Languages, Native Accents</h3>
                     <p className="text-muted-foreground">
-                      Support customers in their native language with our 36-language capability. Our AI understands regional accents, cultural nuances, and can seamlessly switch languages mid-conversation, ensuring every customer feels heard and understood.
+                      Support customers in their native language with our 10+ language capability. Our AI understands regional accents, cultural nuances, and can seamlessly switch languages mid-conversation, ensuring every customer feels heard and understood.
                     </p>
                   </motion.div>
 

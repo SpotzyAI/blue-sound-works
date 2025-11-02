@@ -16,11 +16,11 @@ const FAQ = () => {
     },
     {
       question: "How is SpotzyAI different from other AI voice assistants?",
-      answer: "SpotzyAI stands out with several unique features: (1) Real-time availability checking during calls - especially revolutionary for restaurants where table availability is confirmed instantly, not after the call. (2) True no-code platform - build sophisticated voice agents without writing any code. (3) Support for 36 languages with native accent recognition. (4) Enterprise-scale handling up to 1000+ concurrent calls. (5) Complete B2B partnership model for restaurants including full setup, maintenance, and a free reservation dashboard."
+      answer: "SpotzyAI stands out with several unique features: (1) Real-time availability checking during calls - especially revolutionary for restaurants where table availability is confirmed instantly, not after the call. (2) True no-code platform - build sophisticated voice agents without writing any code. (3) Support for 10+ languages with native accent recognition. (4) Enterprise-scale handling up to 1000+ concurrent calls. (5) Complete B2B partnership model for restaurants including full setup, maintenance, and a free reservation dashboard."
     },
     {
       question: "What languages does SpotzyAI support?",
-      answer: "SpotzyAI supports 36 languages with native accent recognition and cultural adaptation. This includes English, Spanish, French, German, Italian, Portuguese, Dutch, Russian, Polish, Turkish, Arabic, Hebrew, Hindi, Chinese (Mandarin, Cantonese), Japanese, Korean, Thai, Vietnamese, Indonesian, Malay, Filipino, Swedish, Norwegian, Danish, Finnish, Czech, Hungarian, Romanian, Greek, and more. Our AI can seamlessly handle multilingual conversations and switch between languages as needed during a single call."
+      answer: "SpotzyAI supports 10+ languages with native accent recognition and cultural adaptation. This includes major languages like English, Spanish, French, German, Italian, Portuguese, Chinese, Japanese, and more. Our AI can seamlessly handle multilingual conversations and switch between languages as needed during a single call."
     },
     {
       question: "Can SpotzyAI integrate with my existing systems?",
@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: "How much does SpotzyAI cost?",
-      answer: "SpotzyAI offers flexible pricing to suit businesses of all sizes: Starter Plan ($19.99/month) includes 100 minutes, basic features, and email support. Pro Plan ($99.99/month - Most Popular) includes 500 minutes, advanced features, priority support, and custom branding. Ultimate Plan ($599.99/month) includes 3000 minutes, 1000 concurrent calls, dedicated support, and enterprise features. Additional minutes are available at competitive rates. For restaurants, we offer specialized B2B contracts that include complete project setup, maintenance, and a free reservation dashboard - contact us for custom pricing."
+      answer: "SpotzyAI offers flexible pricing to suit businesses of all sizes: Starter Plan ($19.99/month) includes 75 minutes ($0.20/extra minute), 2 assistants, 1 outbound campaign, and 3 calls in parallel. Pro Plan ($90/month - Most Popular) includes 500 minutes ($18/extra minute), 10 assistants, 10 outbound campaigns, and 10 calls in parallel. Ultimate Plan ($220/month) includes 1500 minutes ($0.14/extra minute), unlimited assistants and campaigns, 1000 calls in parallel, and WhatsApp 1-1 support. For restaurants, we offer specialized B2B contracts that include complete project setup, maintenance, and a free reservation dashboard."
     },
     {
       question: "What industries can benefit from SpotzyAI?",
