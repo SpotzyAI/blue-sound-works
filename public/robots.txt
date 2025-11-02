@@ -21,3 +21,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://spotzyai.lovable.app/sitemap.xml
