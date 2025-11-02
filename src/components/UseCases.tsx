@@ -1,9 +1,15 @@
-import { Phone, MessageSquare, Calendar, ShoppingBag, HeadphonesIcon, Briefcase } from "lucide-react";
+import { Phone, MessageSquare, Calendar, ShoppingBag, HeadphonesIcon, Briefcase, UtensilsCrossed } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const useCases = [
+  {
+    icon: UtensilsCrossed,
+    title: "Restaurants",
+    description: "Real-time reservation management with AI voice agents",
+    link: "/industries/restaurant",
+  },
   {
     icon: HeadphonesIcon,
     title: "Call center",
