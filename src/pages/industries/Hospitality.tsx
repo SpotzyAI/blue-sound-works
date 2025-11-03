@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Calendar, MessageSquare, Clock, CheckCircle, XCircle, Settings, Bell, Sparkles, TrendingUp, Users, Star, Zap, Hotel, Globe, HeadphonesIcon, Coffee, ConciergeBell, Bed } from "lucide-react";
+import { ArrowRight, Phone, Calendar, MessageSquare, Clock, CheckCircle, XCircle, Settings, Bell, Sparkles, TrendingUp, Users, Star, Zap, Hotel, Globe, HeadphonesIcon, Coffee, ConciergeBell, Bed, TrendingDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet";
@@ -259,6 +259,12 @@ const Hospitality = () => {
                     <Star className="h-5 w-5 text-primary" />
                   </div>
                   <span className="font-medium">Enhanced guest satisfaction</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <TrendingDown className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="font-medium">Reduced operational costs</span>
                 </div>
               </div>
 
