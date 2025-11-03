@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Sparkles, Zap, Crown, ArrowRight, Hotel, UtensilsCrossed } from "lucide-react";
+import { Check, Sparkles, Zap, Crown, ArrowRight, Hotel, UtensilsCrossed, Settings } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
@@ -185,6 +185,59 @@ const RestaurantPricing = () => {
                 );
               })}
             </div>
+
+            {/* Setup Costs Section */}
+            <motion.section 
+              className="container mx-auto px-6 mt-20 mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center gap-3 mb-4">
+                    <Settings className="h-8 w-8 text-primary" />
+                    <h2 className="text-3xl md:text-4xl font-bold">Setup Costs</h2>
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* LITE Setup */}
+                  <Card className="glass-card p-8">
+                    <h3 className="text-2xl font-bold mb-6">LITE</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-4xl font-bold text-primary mb-2">€300 <span className="text-lg text-muted-foreground">+ VAT</span></div>
+                        <p className="text-muted-foreground">(one-time)</p>
+                      </div>
+                      <div className="pt-4 border-t border-border">
+                        <p className="text-muted-foreground">€100 per additional language</p>
+                      </div>
+                      <div className="glass-card p-4 rounded-lg bg-primary/5 mt-6">
+                        <p className="font-semibold text-primary">Free Training Included</p>
+                      </div>
+                    </div>
+                  </Card>
+
+                  {/* GROUP Setup */}
+                  <Card className="glass-card p-8">
+                    <h3 className="text-2xl font-bold mb-6">GROUP</h3>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="text-4xl font-bold text-primary mb-2">€200 <span className="text-lg text-muted-foreground">+ VAT</span></div>
+                        <p className="text-muted-foreground">(one-time)</p>
+                      </div>
+                      <div className="pt-4 border-t border-border">
+                        <p className="text-muted-foreground">per assistant | €150 per additional language</p>
+                      </div>
+                      <div className="glass-card p-4 rounded-lg bg-primary/5 mt-6">
+                        <p className="font-semibold text-primary">Free Training Included</p>
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+            </motion.section>
 
             {/* Additional Info */}
             <motion.div 
