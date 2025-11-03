@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar, MessageSquare, Clock, CheckCircle, XCircle, Settings, Bell, Gift, TrendingUp, Users, Star, Zap } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import RestaurantPricingCard from "@/components/RestaurantPricingCard";
 import FeatureShowcase from "@/components/FeatureShowcase";
 const Restaurant = () => {
   const features = [{
@@ -216,8 +215,31 @@ const Restaurant = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <RestaurantPricingCard />
+      {/* Pricing CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Explore our flexible pricing plans designed for restaurants of all sizes
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button variant="hero" size="lg" className="group" asChild>
+                <a href="/pricing/restaurant-solutions">
+                  View Pricing Plans
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+              <Button variant="glass" size="lg" className="group" asChild>
+                <a href="/contact">
+                  Schedule a Demo
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Before/After Comparison */}
       <section className="py-20 bg-gradient-subtle">
