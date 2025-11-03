@@ -232,6 +232,12 @@ const Hospitality = () => {
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <div className="p-2 rounded-lg bg-primary/10">
+                    <TrendingDown className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="font-medium">Reduced operational costs</span>
+                </div>
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <div className="p-2 rounded-lg bg-primary/10">
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
                   <span className="font-medium">24/7 guest assistance</span>
@@ -259,12 +265,6 @@ const Hospitality = () => {
                     <Star className="h-5 w-5 text-primary" />
                   </div>
                   <span className="font-medium">Enhanced guest satisfaction</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <TrendingDown className="h-5 w-5 text-primary" />
-                  </div>
-                  <span className="font-medium">Reduced operational costs</span>
                 </div>
               </div>
 
