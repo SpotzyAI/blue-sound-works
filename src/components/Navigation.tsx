@@ -3,139 +3,102 @@ import { Button } from "@/components/ui/button";
 import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat, Wrench, X } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { scrollYProgress } = useScroll();
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [0, 0.05],
-    ["rgba(255, 255, 255, 0.05)", "rgba(255, 255, 255, 0.1)"]
-  );
-  const solutionItems = [
-    {
-      icon: Sparkles,
-      title: "Features",
-      description: "Explore powerful AI voice capabilities",
-      href: "/#features",
-    },
-    {
-      icon: Zap,
-      title: "Use Cases",
-      description: "See how businesses leverage our platform",
-      href: "/#use-cases",
-    },
-    {
-      icon: FileText,
-      title: "Integrations",
-      description: "Connect with your favorite tools",
-      href: "/integrations",
-    },
-    {
-      icon: BookOpen,
-      title: "Languages",
-      description: "Explore 36 languages and voices",
-      href: "/languages",
-    },
-  ];
-
-  const industryItems = [
-    {
-      icon: Heart,
-      title: "Healthcare",
-      description: "Automating phone calls in the medical field",
-      href: "/industries/healthcare",
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-commerce",
-      description: "Improve e-commerce customer service with AI voice",
-      href: "/industries/ecommerce",
-    },
-    {
-      icon: Building2,
-      title: "Call center",
-      description: "AI voice agents for call center phone calls",
-      href: "/industries/call-center",
-    },
-    {
-      icon: Home,
-      title: "Real estate",
-      description: "Automate real estate phone calls with AI voice agents",
-      href: "/industries/real-estate",
-    },
-    {
-      icon: Briefcase,
-      title: "Services",
-      description: "AI voice agents for service industry phone calls",
-      href: "/industries/services",
-    },
-    {
-      icon: Utensils,
-      title: "Hospitality",
-      description: "AI voice automation for hotels, restaurants & resorts",
-      href: "/industries/hospitality",
-    },
-    {
-      icon: ChefHat,
-      title: "Restaurant",
-      description: "Real-time reservation system with AI voice assistants",
-      href: "/industries/restaurant",
-    },
-    {
-      icon: Scale,
-      title: "Legal",
-      description: "Automated legal client communication",
-      href: "/industries/legal",
-    },
-    {
-      icon: Car,
-      title: "Car Dealership",
-      description: "Automated auto sales and service communication",
-      href: "/industries/car-dealership",
-    },
-  ];
-
-  const resourceItems = [
-    {
-      icon: Mail,
-      title: "Contact",
-      description: "Get in touch with our team",
-      href: "/contact",
-    },
-    {
-      icon: Clock,
-      title: "Documentation",
-      description: "Learn how to use our platform",
-      href: "https://docs.spotzyai.com",
-    },
-  ];
-
-  return (
-    <>
+  const {
+    scrollYProgress
+  } = useScroll();
+  const backgroundColor = useTransform(scrollYProgress, [0, 0.05], ["rgba(255, 255, 255, 0.05)", "rgba(255, 255, 255, 0.1)"]);
+  const solutionItems = [{
+    icon: Sparkles,
+    title: "Features",
+    description: "Explore powerful AI voice capabilities",
+    href: "/#features"
+  }, {
+    icon: Zap,
+    title: "Use Cases",
+    description: "See how businesses leverage our platform",
+    href: "/#use-cases"
+  }, {
+    icon: FileText,
+    title: "Integrations",
+    description: "Connect with your favorite tools",
+    href: "/integrations"
+  }, {
+    icon: BookOpen,
+    title: "Languages",
+    description: "Explore 36 languages and voices",
+    href: "/languages"
+  }];
+  const industryItems = [{
+    icon: Heart,
+    title: "Healthcare",
+    description: "Automating phone calls in the medical field",
+    href: "/industries/healthcare"
+  }, {
+    icon: ShoppingCart,
+    title: "E-commerce",
+    description: "Improve e-commerce customer service with AI voice",
+    href: "/industries/ecommerce"
+  }, {
+    icon: Building2,
+    title: "Call center",
+    description: "AI voice agents for call center phone calls",
+    href: "/industries/call-center"
+  }, {
+    icon: Home,
+    title: "Real estate",
+    description: "Automate real estate phone calls with AI voice agents",
+    href: "/industries/real-estate"
+  }, {
+    icon: Briefcase,
+    title: "Services",
+    description: "AI voice agents for service industry phone calls",
+    href: "/industries/services"
+  }, {
+    icon: Utensils,
+    title: "Hospitality",
+    description: "AI voice automation for hotels, restaurants & resorts",
+    href: "/industries/hospitality"
+  }, {
+    icon: ChefHat,
+    title: "Restaurant",
+    description: "Real-time reservation system with AI voice assistants",
+    href: "/industries/restaurant"
+  }, {
+    icon: Scale,
+    title: "Legal",
+    description: "Automated legal client communication",
+    href: "/industries/legal"
+  }, {
+    icon: Car,
+    title: "Car Dealership",
+    description: "Automated auto sales and service communication",
+    href: "/industries/car-dealership"
+  }];
+  const resourceItems = [{
+    icon: Mail,
+    title: "Contact",
+    description: "Get in touch with our team",
+    href: "/contact"
+  }, {
+    icon: Clock,
+    title: "Documentation",
+    description: "Learn how to use our platform",
+    href: "https://docs.spotzyai.com"
+  }];
+  return <>
       {/* Scroll Progress Bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-accent z-[60]"
-        style={{ scaleX: scrollYProgress, transformOrigin: "0%" }}
-      />
+      <motion.div className="fixed top-0 left-0 right-0 h-1 bg-gradient-accent z-[60]" style={{
+      scaleX: scrollYProgress,
+      transformOrigin: "0%"
+    }} />
       
-      <motion.nav 
-        className="fixed top-1 left-0 right-0 z-50 glass-card transition-all duration-300"
-        style={{ backgroundColor }}
-      >
+      <motion.nav className="fixed top-1 left-0 right-0 z-50 glass-card transition-all duration-300" style={{
+      backgroundColor
+    }}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-all duration-300 hover:scale-105">
@@ -152,12 +115,7 @@ const Navigation = () => {
                   <div className="w-[400px] p-6 glass-card">
                     <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Explore Our Platform</h3>
                     <div className="grid gap-3">
-                      {solutionItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
-                        >
+                      {solutionItems.map(item => <a key={item.title} href={item.href} className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1">
                           <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
@@ -165,8 +123,7 @@ const Navigation = () => {
                             <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -178,12 +135,7 @@ const Navigation = () => {
                   <div className="w-[700px] p-6 glass-card">
                     <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Industries we serve</h3>
                     <div className="grid grid-cols-3 gap-3">
-                      {industryItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
-                        >
+                      {industryItems.map(item => <a key={item.title} href={item.href} className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
                           <div className="p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
@@ -191,8 +143,7 @@ const Navigation = () => {
                             <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -204,10 +155,7 @@ const Navigation = () => {
                   <div className="w-[400px] p-6 glass-card">
                     <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Choose Your Path</h3>
                     <div className="grid gap-3">
-                      <a
-                        href="/pricing"
-                        className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
-                      >
+                      <a href="/pricing" className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1">
                         <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                           <Sparkles className="h-5 w-5" />
                         </div>
@@ -216,16 +164,13 @@ const Navigation = () => {
                           <div className="text-sm text-muted-foreground">Self-service platform pricing for DIY solutions</div>
                         </div>
                       </a>
-                      <a
-                        href="/pricing/hospitality-pricing"
-                        className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
-                      >
+                      <a href="/pricing/hospitality-pricing" className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1">
                         <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                           <Wrench className="h-5 w-5" />
                         </div>
                         <div className="flex-1">
                           <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">We Build It For You</div>
-                          <div className="text-sm text-muted-foreground">Full-service restaurant AI solutions with complete setup</div>
+                          <div className="text-sm text-muted-foreground">Full-service hospitality AI solutions with complete setup</div>
                         </div>
                       </a>
                     </div>
@@ -239,12 +184,7 @@ const Navigation = () => {
                   <div className="w-[500px] p-6 glass-card">
                     <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Resources & Support</h3>
                     <div className="grid grid-cols-2 gap-3">
-                      {resourceItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1"
-                        >
+                      {resourceItems.map(item => <a key={item.title} href={item.href} className="group flex flex-col items-start gap-2 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:-translate-y-1">
                           <div className="p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
                             <item.icon className="h-5 w-5" />
                           </div>
@@ -252,8 +192,7 @@ const Navigation = () => {
                             <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
                 </NavigationMenuContent>
@@ -262,19 +201,10 @@ const Navigation = () => {
           </NavigationMenu>
 
           <div className="flex items-center gap-4">
-            <Button 
-              variant="ghost" 
-              className="hidden md:inline-flex transition-all duration-300 hover:scale-105"
-              onClick={() => window.location.href = "https://platform.spotzyai.com"}
-            >
+            <Button variant="ghost" className="hidden md:inline-flex transition-all duration-300 hover:scale-105" onClick={() => window.location.href = "https://platform.spotzyai.com"}>
               Sign In
             </Button>
-            <Button 
-              variant="hero" 
-              size="default" 
-              className="hover-lift animate-glow"
-              onClick={() => window.location.href = "https://platform.spotzyai.com"}
-            >
+            <Button variant="hero" size="default" className="hover-lift animate-glow" onClick={() => window.location.href = "https://platform.spotzyai.com"}>
               Get Started
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -288,59 +218,37 @@ const Navigation = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-3">Solution</h3>
                     <div className="flex flex-col gap-2">
-                      {solutionItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
-                        >
+                      {solutionItems.map(item => <a key={item.title} href={item.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all">
                           <item.icon className="h-5 w-5 text-primary" />
                           <div>
                             <div className="font-medium">{item.title}</div>
                             <div className="text-sm text-muted-foreground">{item.description}</div>
                           </div>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
 
                   <div>
                     <h3 className="font-semibold text-lg mb-3">Industries</h3>
                     <div className="flex flex-col gap-2">
-                      {industryItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
-                        >
+                      {industryItems.map(item => <a key={item.title} href={item.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all">
                           <item.icon className="h-5 w-5 text-primary" />
                           <span className="font-medium">{item.title}</span>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
 
                   <div>
                     <h3 className="font-semibold text-lg mb-3">Pricing</h3>
                     <div className="flex flex-col gap-2">
-                      <a
-                        href="/pricing"
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
-                      >
+                      <a href="/pricing" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all">
                         <Sparkles className="h-5 w-5 text-primary" />
                         <div>
                           <div className="font-medium">Build It Yourself</div>
                           <div className="text-sm text-muted-foreground">Self-service platform pricing</div>
                         </div>
                       </a>
-                      <a
-                        href="/pricing/hospitality-pricing"
-                        onClick={() => setIsOpen(false)}
-                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
-                      >
+                      <a href="/pricing/hospitality-pricing" onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all">
                         <Wrench className="h-5 w-5 text-primary" />
                         <div>
                           <div className="font-medium">We Build It For You</div>
@@ -353,39 +261,24 @@ const Navigation = () => {
                   <div>
                     <h3 className="font-semibold text-lg mb-3">Resources</h3>
                     <div className="flex flex-col gap-2">
-                      {resourceItems.map((item) => (
-                        <a
-                          key={item.title}
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
-                        >
+                      {resourceItems.map(item => <a key={item.title} href={item.href} onClick={() => setIsOpen(false)} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all">
                           <item.icon className="h-5 w-5 text-primary" />
                           <span className="font-medium">{item.title}</span>
-                        </a>
-                      ))}
+                        </a>)}
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-3 pt-4 border-t">
-                    <Button 
-                      variant="ghost" 
-                      className="w-full"
-                      onClick={() => {
-                        window.location.href = "https://platform.spotzyai.com";
-                        setIsOpen(false);
-                      }}
-                    >
+                    <Button variant="ghost" className="w-full" onClick={() => {
+                      window.location.href = "https://platform.spotzyai.com";
+                      setIsOpen(false);
+                    }}>
                       Sign In
                     </Button>
-                    <Button 
-                      variant="hero" 
-                      className="w-full"
-                      onClick={() => {
-                        window.location.href = "https://platform.spotzyai.com";
-                        setIsOpen(false);
-                      }}
-                    >
+                    <Button variant="hero" className="w-full" onClick={() => {
+                      window.location.href = "https://platform.spotzyai.com";
+                      setIsOpen(false);
+                    }}>
                       Get Started
                     </Button>
                   </div>
@@ -396,9 +289,6 @@ const Navigation = () => {
         </div>
       </div>
     </motion.nav>
-  </>
-);
+  </>;
 };
-
 export default Navigation;
-
