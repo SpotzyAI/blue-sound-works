@@ -5,74 +5,39 @@ import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Zap, Crown, ArrowRight, Hotel, UtensilsCrossed, Settings } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-
 const RestaurantPricing = () => {
-  const plans = [
-    {
-      name: "LITE",
-      icon: Sparkles,
-      description: "Perfect for small hotels & restaurants",
-      price: "€199",
-      period: "+ VAT / month",
-      additionalUsage: "€0.30 / minute",
-      features: [
-        "1 Assistant",
-        "150 free minutes",
-        "10 concurrent calls",
-        "1 SMS Automation",
-        "24/7 Availability",
-        "2 Languages Included",
-        "Real-Time Availability",
-        "Free Booking System",
-        "Free Training & Customisation"
-      ],
-      cta: "Contact Us for Demo",
-      popular: false
-    },
-    {
-      name: "GROUP",
-      icon: Zap,
-      description: "Ideal for hotel chains & restaurant groups",
-      price: "€159",
-      period: "+ VAT / month per assistant",
-      additionalUsage: "€0.25 / minute",
-      features: [
-        "5-10 Assistants",
-        "150 free minutes per assistant",
-        "15 concurrent calls per assistant",
-        "2 SMS Automations",
-        "24/7 Availability",
-        "3 Languages Included",
-        "Real-Time Availability",
-        "Priority Support",
-        "Free Booking System",
-        "Free Training & Customisation"
-      ],
-      cta: "Contact Us for Demo",
-      popular: true
-    },
-    {
-      name: "ENTERPRISE",
-      icon: Crown,
-      description: "Built for large hospitality operations",
-      price: "€Custom",
-      period: "+ VAT",
-      additionalUsage: "Contact us",
-      features: [
-        "11+ Assistants",
-        "Tailored pricing based on call volume and features",
-        "Volume discounts available",
-        "Advanced analytics & reporting",
-        "SLA & Dedicated Manager",
-        "Contact us for a custom offer"
-      ],
-      cta: "Contact Us for Demo",
-      popular: false
-    }
-  ];
-
-  return (
-    <>
+  const plans = [{
+    name: "LITE",
+    icon: Sparkles,
+    description: "Perfect for small hotels & restaurants",
+    price: "€199",
+    period: "+ VAT / month",
+    additionalUsage: "€0.30 / minute",
+    features: ["1 Assistant", "150 free minutes", "10 concurrent calls", "1 SMS Automation", "24/7 Availability", "2 Languages Included", "Real-Time Availability", "Free Booking System", "Free Training & Customisation"],
+    cta: "Contact Us for Demo",
+    popular: false
+  }, {
+    name: "GROUP",
+    icon: Zap,
+    description: "Ideal for hotel chains & restaurant groups",
+    price: "€159",
+    period: "+ VAT / month per assistant",
+    additionalUsage: "€0.25 / minute",
+    features: ["5-10 Assistants", "150 free minutes per assistant", "15 concurrent calls per assistant", "2 SMS Automations", "24/7 Availability", "3 Languages Included", "Real-Time Availability", "Priority Support", "Free Booking System", "Free Training & Customisation"],
+    cta: "Contact Us for Demo",
+    popular: true
+  }, {
+    name: "ENTERPRISE",
+    icon: Crown,
+    description: "Built for large hospitality operations",
+    price: "€Custom",
+    period: "+ VAT",
+    additionalUsage: "Contact us",
+    features: ["11+ Assistants", "Tailored pricing based on call volume and features", "Volume discounts available", "Advanced analytics & reporting", "SLA & Dedicated Manager", "Contact us for a custom offer"],
+    cta: "Contact Us for Demo",
+    popular: false
+  }];
+  return <>
       <Helmet>
         <title>Hospitality AI Solutions Pricing - Hotels & Restaurants | SpotzyAI</title>
         <meta name="description" content="Flexible pricing plans for hospitality AI voice assistants. Perfect for hotels, restaurants, and hospitality groups. From single locations to enterprise chains." />
@@ -85,25 +50,34 @@ const RestaurantPricing = () => {
         <main className="pt-24 pb-16">
           {/* Hero Section */}
           <section className="container mx-auto px-6 mb-16">
-            <motion.div 
-              className="max-w-4xl mx-auto text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <motion.div className="max-w-4xl mx-auto text-center" initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6
+          }}>
               <div className="flex items-center justify-center gap-4 mb-6">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
+                <motion.div initial={{
+                scale: 0
+              }} animate={{
+                scale: 1
+              }} transition={{
+                duration: 0.5,
+                delay: 0.2
+              }}>
                   <Hotel className="h-12 w-12 text-primary" />
                 </motion.div>
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
+                <motion.div initial={{
+                scale: 0
+              }} animate={{
+                scale: 1
+              }} transition={{
+                duration: 0.5,
+                delay: 0.3
+              }}>
                   <UtensilsCrossed className="h-12 w-12 text-primary" />
                 </motion.div>
               </div>
@@ -124,24 +98,21 @@ const RestaurantPricing = () => {
           <section className="container mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {plans.map((plan, index) => {
-                const Icon = plan.icon;
-                return (
-                  <motion.div
-                    key={plan.name}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Card className={`relative p-8 h-full flex flex-col ${
-                      plan.popular 
-                        ? 'border-primary shadow-glow bg-gradient-to-br from-primary/5 to-primary/10' 
-                        : 'glass-card'
-                    }`}>
-                      {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
+              const Icon = plan.icon;
+              return <motion.div key={plan.name} initial={{
+                opacity: 0,
+                y: 30
+              }} animate={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.5,
+                delay: index * 0.1
+              }}>
+                    <Card className={`relative p-8 h-full flex flex-col ${plan.popular ? 'border-primary shadow-glow bg-gradient-to-br from-primary/5 to-primary/10' : 'glass-card'}`}>
+                      {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
                           MOST POPULAR
-                        </div>
-                      )}
+                        </div>}
                       
                       <div className="mb-6">
                         <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-4">
@@ -160,12 +131,7 @@ const RestaurantPricing = () => {
                         </div>
                       </div>
 
-                      <Button 
-                        size="lg" 
-                        variant={plan.popular ? "hero" : "glass"}
-                        className="w-full mb-6 group"
-                        asChild
-                      >
+                      <Button size="lg" variant={plan.popular ? "hero" : "glass"} className="w-full mb-6 group" asChild>
                         <a href="/contact">
                           {plan.cta}
                           <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -173,26 +139,27 @@ const RestaurantPricing = () => {
                       </Button>
 
                       <div className="space-y-3 flex-grow">
-                        {plan.features.map((feature) => (
-                          <div key={feature} className="flex items-start gap-3">
+                        {plan.features.map(feature => <div key={feature} className="flex items-start gap-3">
                             <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                             <span className="text-sm">{feature}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </Card>
-                  </motion.div>
-                );
-              })}
+                  </motion.div>;
+            })}
             </div>
 
             {/* Setup Costs Section */}
-            <motion.section 
-              className="container mx-auto px-6 mt-20 mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            >
+            <motion.section className="container mx-auto px-6 mt-20 mb-16" initial={{
+            opacity: 0,
+            y: 30
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.6,
+            delay: 0.5
+          }}>
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-12">
                   <div className="inline-flex items-center gap-3 mb-4">
@@ -240,12 +207,14 @@ const RestaurantPricing = () => {
             </motion.section>
 
             {/* Additional Info */}
-            <motion.div 
-              className="max-w-4xl mx-auto mt-16 text-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <motion.div className="max-w-4xl mx-auto mt-16 text-center" initial={{
+            opacity: 0
+          }} animate={{
+            opacity: 1
+          }} transition={{
+            duration: 0.6,
+            delay: 0.4
+          }}>
               <Card className="glass-card p-8">
                 <h3 className="text-2xl font-bold mb-6">What's Included in Every Plan</h3>
                 <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -254,9 +223,7 @@ const RestaurantPricing = () => {
                       <Check className="h-5 w-5 text-primary" />
                       Free Booking System Integration
                     </h4>
-                    <p className="text-sm text-muted-foreground">
-                      Seamlessly connect with your existing reservation and PMS systems
-                    </p>
+                    <p className="text-sm text-muted-foreground">Exclusive real-time update dashboard with many features</p>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -311,8 +278,6 @@ const RestaurantPricing = () => {
 
         <Footer />
       </div>
-    </>
-  );
+    </>;
 };
-
 export default RestaurantPricing;
