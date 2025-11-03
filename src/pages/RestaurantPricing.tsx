@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Check, Sparkles, Zap, Crown, ArrowRight } from "lucide-react";
+import { Check, Sparkles, Zap, Crown, ArrowRight, Hotel, UtensilsCrossed } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
@@ -11,7 +11,7 @@ const RestaurantPricing = () => {
     {
       name: "LITE",
       icon: Sparkles,
-      description: "Perfect for small restaurants",
+      description: "Perfect for small hotels & restaurants",
       price: "€199",
       period: "+ VAT / month",
       additionalUsage: "€0.30 / minute",
@@ -32,7 +32,7 @@ const RestaurantPricing = () => {
     {
       name: "GROUP",
       icon: Zap,
-      description: "Ideal for restaurant groups",
+      description: "Ideal for hotel chains & restaurant groups",
       price: "€159",
       period: "+ VAT / month per assistant",
       additionalUsage: "€0.25 / minute",
@@ -54,7 +54,7 @@ const RestaurantPricing = () => {
     {
       name: "ENTERPRISE",
       icon: Crown,
-      description: "Built for large operations",
+      description: "Built for large hospitality operations",
       price: "€Custom",
       period: "+ VAT",
       additionalUsage: "Contact us",
@@ -74,8 +74,8 @@ const RestaurantPricing = () => {
   return (
     <>
       <Helmet>
-        <title>Restaurant AI Solutions Pricing - SpotzyAI</title>
-        <meta name="description" content="Flexible pricing plans for restaurant AI voice assistants. From single locations to enterprise chains, we have a solution for you." />
+        <title>Hospitality AI Solutions Pricing - Hotels & Restaurants | SpotzyAI</title>
+        <meta name="description" content="Flexible pricing plans for hospitality AI voice assistants. Perfect for hotels, restaurants, and hospitality groups. From single locations to enterprise chains." />
         <link rel="canonical" href="https://spotzyai.lovable.app/pricing/restaurant-solutions" />
       </Helmet>
 
@@ -91,15 +91,31 @@ const RestaurantPricing = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Hotel className="h-12 w-12 text-primary" />
+                </motion.div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <UtensilsCrossed className="h-12 w-12 text-primary" />
+                </motion.div>
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Restaurant AI Solutions
+                Hospitality AI Solutions
                 <span className="block bg-gradient-accent bg-clip-text text-transparent mt-2">
                   We Build It For You
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Comprehensive AI voice assistant solutions tailored for restaurants. 
-                From setup to training, we handle everything.
+                Comprehensive AI voice assistant solutions for hotels and restaurants. 
+                From setup to training, we handle everything so you can focus on your guests.
               </p>
             </motion.div>
           </section>
@@ -178,7 +194,7 @@ const RestaurantPricing = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Card className="glass-card p-8">
-                <h3 className="text-2xl font-bold mb-4">What's Included</h3>
+                <h3 className="text-2xl font-bold mb-6">What's Included in Every Plan</h3>
                 <div className="grid md:grid-cols-2 gap-6 text-left">
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -186,7 +202,7 @@ const RestaurantPricing = () => {
                       Free Booking System Integration
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      Seamlessly connect with your existing reservation system
+                      Seamlessly connect with your existing reservation and PMS systems
                     </p>
                   </div>
                   <div>
@@ -195,7 +211,7 @@ const RestaurantPricing = () => {
                       Complete Training & Customisation
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      We train your AI assistant to match your restaurant's unique style
+                      We train your AI assistant to match your brand's unique personality and service standards
                     </p>
                   </div>
                   <div>
@@ -204,7 +220,7 @@ const RestaurantPricing = () => {
                       Real-Time Availability Updates
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      Keep your customers informed with live table availability
+                      Keep guests informed with live room and table availability across all properties
                     </p>
                   </div>
                   <div>
@@ -213,7 +229,25 @@ const RestaurantPricing = () => {
                       24/7 Support & Monitoring
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      Round-the-clock assistance to ensure smooth operations
+                      Round-the-clock assistance to ensure smooth operations and guest satisfaction
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Check className="h-5 w-5 text-primary" />
+                      Multi-Language Support
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Serve international guests in their preferred language with natural conversations
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2 flex items-center gap-2">
+                      <Check className="h-5 w-5 text-primary" />
+                      SMS Automations
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      Automated confirmations, reminders, and follow-ups to reduce no-shows
                     </p>
                   </div>
                 </div>
