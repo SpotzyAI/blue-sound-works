@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat, X } from "lucide-react";
+import { Menu, Sparkles, Zap, Building2, Heart, ShoppingCart, Home, Briefcase, Utensils, Scale, Car, DollarSign, BookOpen, FileText, Mail, Clock, ChefHat, Wrench, X } from "lucide-react";
 import spotzyLogo from "@/assets/spotzy-logo.svg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -221,7 +221,7 @@ const Navigation = () => {
                         className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
                       >
                         <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
-                          <ChefHat className="h-5 w-5" />
+                          <Wrench className="h-5 w-5" />
                         </div>
                         <div className="flex-1">
                           <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">We Build It For You</div>
@@ -341,7 +341,7 @@ const Navigation = () => {
                         onClick={() => setIsOpen(false)}
                         className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
                       >
-                        <ChefHat className="h-5 w-5 text-primary" />
+                        <Wrench className="h-5 w-5 text-primary" />
                         <div>
                           <div className="font-medium">We Build It For You</div>
                           <div className="text-sm text-muted-foreground">Full-service restaurant solutions</div>
