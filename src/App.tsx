@@ -37,7 +37,7 @@ const App = () => (
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/integration/:integrationName" element={<IntegrationDetail />} />
           <Route path="/pricing" element={<Pricing />} />
-          <Route path="/pricing/restaurant-solutions" element={<RestaurantPricing />} />
+          <Route path="/pricing/hospitality-pricing" element={<RestaurantPricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/ecommerce" element={<Ecommerce />} />

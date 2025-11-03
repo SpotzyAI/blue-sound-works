@@ -76,7 +76,7 @@ const RestaurantPricing = () => {
       <Helmet>
         <title>Hospitality AI Solutions Pricing - Hotels & Restaurants | SpotzyAI</title>
         <meta name="description" content="Flexible pricing plans for hospitality AI voice assistants. Perfect for hotels, restaurants, and hospitality groups. From single locations to enterprise chains." />
-        <link rel="canonical" href="https://spotzyai.lovable.app/pricing/restaurant-solutions" />
+        <link rel="canonical" href="https://spotzyai.lovable.app/pricing/hospitality-pricing" />
       </Helmet>
 
       <div className="min-h-screen">

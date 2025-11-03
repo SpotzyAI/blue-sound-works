@@ -225,7 +225,7 @@ const Restaurant = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="hero" size="lg" className="group" asChild>
-                <a href="/pricing/restaurant-solutions">
+                <a href="/pricing/hospitality-pricing">
                   View Pricing Plans
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>

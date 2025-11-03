@@ -276,7 +276,7 @@ const Hospitality = () => {
                   </a>
                 </Button>
                 <Button variant="glass" size="lg" asChild>
-                  <a href="/pricing/restaurant-solutions">
+                  <a href="/pricing/hospitality-pricing">
                     View Pricing
                   </a>
                 </Button>
@@ -501,7 +501,7 @@ const Hospitality = () => {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20" asChild>
-                  <a href="/pricing/restaurant-solutions">
+                  <a href="/pricing/hospitality-pricing">
                     View Pricing Plans
                   </a>
                 </Button>
