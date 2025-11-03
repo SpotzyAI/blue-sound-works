@@ -65,7 +65,7 @@ const Hospitality = () => {
       icon: TrendingUp,
       title: "Operations & Analytics",
       items: [
-        "Reduce staff workload by 70%",
+        "Reduce staff workload by 80%",
         "Detailed call analytics",
         "Guest preference tracking",
         "Peak time optimization",
@@ -240,7 +240,7 @@ const Hospitality = () => {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Globe className="h-5 w-5 text-primary" />
                   </div>
-                  <span className="font-medium">10+ languages supported</span>
+                  <span className="font-medium">36 languages supported</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <div className="p-2 rounded-lg bg-primary/10">
@@ -250,15 +250,9 @@ const Hospitality = () => {
                 </div>
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <div className="p-2 rounded-lg bg-primary/10">
-                    <TrendingUp className="h-5 w-5 text-primary" />
-                  </div>
-                  <span className="font-medium">Increase bookings by 40%</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                  <div className="p-2 rounded-lg bg-primary/10">
                     <Users className="h-5 w-5 text-primary" />
                   </div>
-                  <span className="font-medium">Reduce staff workload 70%</span>
+                  <span className="font-medium">Reduce staff workload 80%</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 border border-primary/10">
                   <div className="p-2 rounded-lg bg-primary/10">
@@ -446,11 +440,11 @@ const Hospitality = () => {
                     {[
                       "Complete project setup and configuration",
                       "Custom AI assistant trained for your property",
-                      "Integration with your booking system",
+                      "Seamless PMS integration support",
                       "Ongoing maintenance and updates",
                       "Technical support and training",
                       "Analytics and performance reports",
-                      "Flexible monthly B2B contract"
+                      "Dedicated account manager"
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
