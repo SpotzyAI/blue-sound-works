@@ -21,6 +21,7 @@ import Hospitality from "./pages/industries/Hospitality";
 import Legal from "./pages/industries/Legal";
 import CarDealership from "./pages/industries/CarDealership";
 import Restaurant from "./pages/industries/Restaurant";
+import RestaurantPricing from "./pages/RestaurantPricing";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/integrations" element={<Integrations />} />
           <Route path="/integration/:integrationName" element={<IntegrationDetail />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pricing/restaurant-solutions" element={<RestaurantPricing />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/industries/healthcare" element={<Healthcare />} />
           <Route path="/industries/ecommerce" element={<Ecommerce />} />

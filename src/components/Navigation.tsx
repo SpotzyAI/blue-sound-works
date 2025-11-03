@@ -199,9 +199,38 @@ const Navigation = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink href="/pricing" className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                  Pricing
-                </NavigationMenuLink>
+                <NavigationMenuTrigger>Pricing</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[400px] p-6 glass-card">
+                    <h3 className="text-sm font-semibold bg-gradient-accent bg-clip-text text-transparent mb-4">Choose Your Path</h3>
+                    <div className="grid gap-3">
+                      <a
+                        href="/pricing"
+                        className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
+                      >
+                        <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
+                          <Sparkles className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">Build It Yourself</div>
+                          <div className="text-sm text-muted-foreground">Self-service platform pricing for DIY solutions</div>
+                        </div>
+                      </a>
+                      <a
+                        href="/pricing/restaurant-solutions"
+                        className="group flex items-start gap-4 rounded-lg p-3 glass hover:glass-strong transition-all duration-300 hover:shadow-soft hover:translate-x-1"
+                      >
+                        <div className="mt-1 p-2 rounded-lg glass-strong text-primary group-hover:animate-glow transition-all duration-300 group-hover:scale-110">
+                          <ChefHat className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">We Build It For You</div>
+                          <div className="text-sm text-muted-foreground">Full-service restaurant AI solutions with complete setup</div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
@@ -294,14 +323,31 @@ const Navigation = () => {
                   </div>
 
                   <div>
-                    <a
-                      href="/pricing"
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all font-medium"
-                    >
-                      <DollarSign className="h-5 w-5 text-primary" />
-                      Pricing
-                    </a>
+                    <h3 className="font-semibold text-lg mb-3">Pricing</h3>
+                    <div className="flex flex-col gap-2">
+                      <a
+                        href="/pricing"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
+                      >
+                        <Sparkles className="h-5 w-5 text-primary" />
+                        <div>
+                          <div className="font-medium">Build It Yourself</div>
+                          <div className="text-sm text-muted-foreground">Self-service platform pricing</div>
+                        </div>
+                      </a>
+                      <a
+                        href="/pricing/restaurant-solutions"
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-all"
+                      >
+                        <ChefHat className="h-5 w-5 text-primary" />
+                        <div>
+                          <div className="font-medium">We Build It For You</div>
+                          <div className="text-sm text-muted-foreground">Full-service restaurant solutions</div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
 
                   <div>
