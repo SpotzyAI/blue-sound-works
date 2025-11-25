@@ -72,7 +72,7 @@ const Hero = () => {
           duration: 0.6,
           delay: 0.25,
           ease: "easeOut"
-        }} className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto md:text-xl">AI employees that answer, book and serve 24/7 in 36+ languages. Use our no-code platform yourself, or let our team handle everything. Same intelligence. Your timeline.</motion.p>
+        }} className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto md:text-xl">AI employees that answer and serve phone calls 24/7 in 36+ languages. Use our no-code platform yourself, or let our team handle everything. Same intelligence. Your timeline.</motion.p>
 
           {/* AI Waveform Animation */}
           <motion.div className="mb-8" initial={{
