@@ -59,7 +59,7 @@ const Hero = () => {
           duration: 0.7,
           delay: 0.1,
           ease: "easeOut"
-        }}>Automate Smarter. <span className="bg-gradient-accent bg-clip-text text-transparent">Grow </span><span className="bg-gradient-accent bg-clip-text text-transparent">Assistants</span> in Minutes
+        }}>Automate Smarter. Grow Faster. <span className="bg-gradient-accent bg-clip-text text-transparent">With AI</span>
           </motion.h1>
           
           <motion.p initial={{
