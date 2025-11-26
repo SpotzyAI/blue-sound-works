@@ -19,7 +19,7 @@ const RestaurantPricing = () => {
   }, {
     name: "GROUP",
     icon: Zap,
-    description: "Ideal for hotel chains & restaurant groups",
+    description: "Ideal for restaurant groups",
     price: "€159",
     period: "+ VAT / month per assistant",
     additionalUsage: "€0.25 / minute",
