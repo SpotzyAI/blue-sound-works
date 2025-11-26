@@ -9,7 +9,7 @@ const RestaurantPricing = () => {
   const plans = [{
     name: "LITE",
     icon: Sparkles,
-    description: "Perfect for small hotels & restaurants",
+    description: "Perfect for restaurants",
     price: "€199",
     period: "+ VAT / month",
     additionalUsage: "€0.30 / minute",
