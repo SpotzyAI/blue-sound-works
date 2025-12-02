@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong>SPOTZY TECH LTD</strong> is a Cyprus legal entity with registration number <strong>HE473593</strong>, headquartered at Austrias 6, 3083, Limassol, Cyprus ("Company," "we," "us," or "our").
+                <strong>SPOTZY TECH LTD</strong> is a Cyprus legal entity with registration number <strong>HE473593</strong>, headquartered in Cyprus ("Company," "we," "us," or "our").
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For the purposes of personal data protection legislation, including the <strong>General Data Protection Regulation (GDPR)</strong>, we are the "data controller" regarding the personal data provided and processed through the websites https://spotzyai.com and https://platform.spotzyai.com (collectively, the "Site" or "Service").
@@ -318,7 +318,7 @@ const PrivacyPolicy = () => {
                 <strong>Email:</strong> info@spotzyai.com
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                <strong>Mail:</strong> SPOTZY TECH LTD, Austrias 6, 3083, Limassol, Cyprus
+                <strong>Mail:</strong> SPOTZY TECH LTD, Cyprus
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 We will respond to your request within one month of receipt.
@@ -375,8 +375,7 @@ const PrivacyPolicy = () => {
                 <strong>SPOTZY TECH LTD</strong>
               </p>
               <p className="text-muted-foreground leading-relaxed mb-2">
-                Austrias 6, 3083<br />
-                Limassol, Cyprus
+                Cyprus
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 <strong>Email:</strong> info@spotzyai.com

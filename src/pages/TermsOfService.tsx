@@ -15,7 +15,7 @@ const TermsOfService = () => {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-4">1. Introduction</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                These Terms of Service (these "Terms") are entered into between you and <strong>SPOTZY TECH LTD</strong> ("SpotzyAI," "us," "we," or "our"), a Cyprus legal entity with registration number <strong>HE473593</strong>, headquartered at Austrias 6, 3083, Limassol, Cyprus ("Company" or "we").
+                These Terms of Service (these "Terms") are entered into between you and <strong>SPOTZY TECH LTD</strong> ("SpotzyAI," "us," "we," or "our"), a Cyprus legal entity with registration number <strong>HE473593</strong>, headquartered in Cyprus ("Company" or "we").
               </p>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 For the purposes of personal data protection legislation, we act as the "data controller" regarding the personal data provided and processed through the website https://spotzyai.com and https://platform.spotzyai.com ("Site" or "Service").
@@ -301,8 +301,7 @@ const TermsOfService = () => {
                 <strong>SPOTZY TECH LTD</strong>
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Austrias 6, 3083<br />
-                Limassol, Cyprus<br />
+                Cyprus<br />
                 Email: info@spotzyai.com
               </p>
             </section>
